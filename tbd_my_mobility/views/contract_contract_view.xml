@@ -22,7 +22,7 @@
                 <xpath expr="//page[@name='recurring_invoice_line']" position="before">
                     <page name="lot" string="Lots">
                         <field name="mymob_lots" widget="section_and_note_one2many">
-                            <tree>
+                            <tree editable="bottom">
                                 <control>
                                     <create string="Add a line" />
                                         <create string="Add a section" context="{'default_display_type': 'line_section'}"/>
