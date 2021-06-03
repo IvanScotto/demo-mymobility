@@ -14,6 +14,25 @@ class TbdContractContract(models.Model):
         'res.partner', string='Invoice Address')
 
 
+    # @api.depends('partner_id')
+    # def _compute_partner_invoice_adress(self):
+    #     for contract in self:
+    #         contract.mymob_partner_invoice_id = contract.partner_id.address_get(['invoice'])
+
+    @api.onchange('partner_id')
+    def onchange_partner_id(self):
+        if not self.partner_id:
+            self.update({
+                'mymob_partner_invoice_id': False
+            })
+            return
+
+        addr = self.partner_id.address_get(['invoice'])
+        values = {
+            'mymob_partner_invoice_id': addr['invoice']
+        }
+        self.update(values)
+
         # TBD Filter
         # readonly=True, required=True,
         # states={'draft': [('readonly', False)], 'sent': [('readonly', False)], 'sale': [('readonly', False)]},
