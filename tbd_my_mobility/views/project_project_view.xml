@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="tbd_project_project_view_form_simplified" model="ir.ui.view">
+        <field name="name">Add mymob_type</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.project_project_view_form_simplified"/>
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//field[@name='user_id']" position="after">
+                     <field name="mymob_agency" required="0"/>
+                     <field name="mymob_client" required="1"/>
+                     <field name="mymob_market" required="1"/>
+                </xpath>
+            </data>
+        </field>
+    </record>
+</odoo>
