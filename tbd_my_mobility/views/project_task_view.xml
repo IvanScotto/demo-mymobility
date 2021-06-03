@@ -12,23 +12,23 @@
                     <group attrs="{'invisible': [('mymob_type', '!=', 'segment')]}">
 <!--                        <field name="mymob_exclusion_calendar" required="0"/>-->
 <!--                        <field name="mymob_status" required="0"/>-->
-                        <field name="mymob_starting_date_validity" required="1"/>
-                        <field name="mymob_ending_date_validity" required="1"/>
-                        <field name="mymob_activity_TPMR" required="0"/>
-                        <field name="mymob_cycle" required="1"/>
+                        <field name="mymob_starting_date_validity"/>
+                        <field name="mymob_ending_date_validity"/>
+                        <field name="mymob_activity_TPMR"/>
+                        <field name="mymob_cycle"/>
                         <!-- attrs="{'required': [('mymob_cycle', '=', WEEKS)]}"-->
-                        <field name="mymob_nbr_cycle" required="0" />
-                        <field name="mymob_category_vehicle" required="0"/>
+                        <field name="mymob_nbr_cycle"/>
+                        <field name="mymob_category_vehicle"/>
                     </group>
                     <group attrs="{'invisible': [('mymob_type', '!=', 'route')]}">
-                        <field name="mymob_start_time" required="1"/>
-                        <field name="mymob_end_time" required="1"/>
-                        <field name="mymob_partner_invoice_id" required="1"/>
+                        <field name="mymob_start_time"/>
+                        <field name="mymob_end_time"/>
+                        <field name="mymob_partner_invoice_id"/>
                     </group>
                     <group attrs="{'invisible': [('mymob_type', '!=', 'driver')]}">
-                        <field name="mymob_start_time" required="1"/>
-                        <field name="mymob_end_time" required="1"/>
-                        <field name="mymob_partner_invoice_id" required="1"/>
+                        <field name="mymob_start_time"/>
+                        <field name="mymob_end_time"/>
+                        <field name="mymob_partner_invoice_id"/>
                     </group>
                 </xpath>
             </data>

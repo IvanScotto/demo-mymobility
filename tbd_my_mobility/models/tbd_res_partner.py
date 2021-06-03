@@ -12,7 +12,6 @@ class TbdResPartner(models.Model):
 
     _inherit = "res.partner"
 
-
     select_sector = [
         ('public', 'Public'),
         ('private', 'Privée')
@@ -37,10 +36,20 @@ class TbdResPartner(models.Model):
     ]
     mymob_student_condition = fields.Selection(select_student_condition, string='Condition')
 
+    # TODO Remplir
     select_school_type = [
         ('WIP', '[WIP] School')
     ]
     mymob_school_type = fields.Selection(select_school_type, string='School type')
+
+    select_vacancy_area = [
+        ('a', 'Zone A'),
+        ('b', 'Zone B'),
+        ('c', 'Zone C')
+    ]
+    mymob_vacancy_area = fields.Selection(select_vacancy_area, string='Zone de vacance')
+    # TODO a definir
+    mymob_school_holidays = fields.Char(default="[WIP]")
 
     # @api.onchange(mymob_partner_type)
     # def on_change_mymob_partner_type(self):

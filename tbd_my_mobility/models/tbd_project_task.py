@@ -29,9 +29,10 @@ class TbdProjectTask(models.Model):
     mymob_ending_date_validity = fields.Datetime('Date de fin de validité')
     mymob_activity_TPMR = fields.Boolean('Activité de TPMR', default=False)
 
-    # TODO Remplir
     select_cycle = [
-        ('wip', '[WIP]')
+        ('week', 'Week'),
+        ('month', 'Month'),
+        ('year', 'Year')
     ]
     mymob_cycle = fields.Selection(select_cycle, 'Cycle')
 
@@ -42,6 +43,7 @@ class TbdProjectTask(models.Model):
     ]
     mymob_nbr_cycle = fields.Selection(select_nbr_cycle, 'Nombre de cycle')
 
+    #TODO Remplir
     select_category_vehicle = [
         ('wip', '[WIP]')
     ]
