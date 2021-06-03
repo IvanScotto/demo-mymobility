@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-    <record id="tbd_contract_contract_form_view" model="ir.ui.view">
+    <record id="tbd_contract_contract_customer_form_view" model="ir.ui.view">
         <field name="name">Add mymob_type</field>
         <field name="model">contract.contract</field>
         <field name="inherit_id" ref="contract.contract_contract_customer_form_view"/>
@@ -8,6 +8,30 @@
             <data>
                 <xpath expr="//field[@name='partner_id']" position="after">
                      <field name="mymob_partner_invoice_id" required="0"/>
+                </xpath>
+            </data>
+        </field>
+    </record>
+
+    <record id="tbd_contract_contract_form_view" model="ir.ui.view">
+        <field name="name">Add mymob_type</field>
+        <field name="model">contract.contract</field>
+        <field name="inherit_id" ref="contract.contract_contract_form_view"/>
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//page[@name='recurring_invoice_line']" position="before">
+                    <page name="recurring_invoice_line" string="Recurring Invoices">
+                        <field name="mymob_lots" widget="section_and_note_one2many">
+                            <tree>
+                                <control>
+                                    <create string="Add a line" />
+                                        <create string="Add a section" context="{'default_display_type': 'line_section'}"/>
+                                        <create string="Add a note" context="{'default_display_type': 'line_note'}"/>
+                                </control>
+                                <field name="name" />
+                            </tree>
+                        </field>
+                    </page>
                 </xpath>
             </data>
         </field>

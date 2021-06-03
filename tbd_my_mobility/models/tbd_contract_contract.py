@@ -12,12 +12,13 @@ class TbdContractContract(models.Model):
 
     mymob_partner_invoice_id = fields.Many2one(
         'res.partner', string='Invoice Address')
-
-
-    # @api.depends('partner_id')
-    # def _compute_partner_invoice_adress(self):
-    #     for contract in self:
-    #         contract.mymob_partner_invoice_id = contract.partner_id.address_get(['invoice'])
+    contract_line_ids = fields.One2many(
+        string="Contract lines",
+        comodel_name="contract.line",
+        inverse_name="contract_id",
+        copy=True,
+    )
+    mymob_lots = fields.One2many(comodel_name='project.project', inverse_name='mymob_market', string='Lots')
 
     @api.onchange('partner_id')
     def onchange_partner_id(self):
@@ -38,4 +39,3 @@ class TbdContractContract(models.Model):
         # states={'draft': [('readonly', False)], 'sent': [('readonly', False)], 'sale': [('readonly', False)]},
         # domain="['|', ('company_id', '=', False), ('company_id', '=', company_id)]"
 
-    # mymob_lots = fields.One2many('contract.contract', 'id', string='Lots')
