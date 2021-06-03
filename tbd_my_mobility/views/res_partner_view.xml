@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_partner_simple_form_mymob_type" model="ir.ui.view">
+        <field name="name">Add mymob_type</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//h1//field[@name='name']/.." position="before">
+<!--                    attrs="{'invisible': [('is_company', '=', True)]}"-->
+                    <group>
+                        <field name="mymob_partner_type" options="{'horizontal': true}" class="oe_edit_only" widget="radio"/>
+                    </group>
+                </xpath>
+                <xpath expr="//field[@name='type']" position="after">
+                    <group attrs="{'invisible': [('mymob_partner_type', '!=', 'customer')]}">
+                        <h1>Customer</h1>
+                        <field name="mymob_sector" required="1"/>
+                        <field name="mymob_contract"/>
+                    </group>
+                </xpath>
+                <xpath expr="//field[@name='type']" position="after">
+                    <group attrs="{'invisible': [('mymob_partner_type', '!=', 'society')]}">
+                        <h1>Society</h1>
+                        <field name="mymob_sector" required="0"/>
+                        <field name="mymob_contract"/>
+                    </group>
+                </xpath>
+                <xpath expr="//field[@name='type']" position="after">
+                    <group attrs="{'invisible': [('mymob_partner_type', '!=', 'school')]}">
+                        <h1>school</h1>
+                        <field name="mymob_sector" required="0"/>
+                        <field name="mymob_school_type"/>
+                    </group>
+                </xpath>
+                <xpath expr="//field[@name='type']" position="after">
+                    <group attrs="{'invisible': [('mymob_partner_type', '!=', 'student')]}">
+                        <h1>student</h1>
+                        <field name="mymob_sector" required="0"/>
+                        <field name="mymob_student_condition"/>
+                    </group>
+                </xpath>
+            </data>
+        </field>
+    </record>
+</odoo>
