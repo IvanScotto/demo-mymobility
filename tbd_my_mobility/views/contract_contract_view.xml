@@ -20,7 +20,7 @@
         <field name="arch" type="xml">
             <data>
                 <xpath expr="//page[@name='recurring_invoice_line']" position="before">
-                    <page name="recurring_invoice_line" string="Recurring Invoices">
+                    <page name="lot" string="Lots">
                         <field name="mymob_lots" widget="section_and_note_one2many">
                             <tree>
                                 <control>
@@ -29,6 +29,8 @@
                                         <create string="Add a note" context="{'default_display_type': 'line_note'}"/>
                                 </control>
                                 <field name="name" />
+                                <field name="date_start"/>
+                                <field name="date"/>
                             </tree>
                         </field>
                     </page>
@@ -37,3 +39,4 @@
         </field>
     </record>
 </odoo>
+<!--  -->
