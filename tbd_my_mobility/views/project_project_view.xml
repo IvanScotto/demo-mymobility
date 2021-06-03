@@ -14,4 +14,21 @@
             </data>
         </field>
     </record>
+
+    <record id="tbd_edit_project" model="ir.ui.view">
+        <field name="name">Add mymob_type</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project"/>
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//div[@name='options_active']" position="before">
+                    <div>
+                        <field name="mymob_agency" required="0"/>
+                        <field name="mymob_client" required="1"/>
+                        <field name="mymob_market" required="1"/>
+                    </div>
+                </xpath>
+            </data>
+        </field>
+    </record>
 </odoo>
