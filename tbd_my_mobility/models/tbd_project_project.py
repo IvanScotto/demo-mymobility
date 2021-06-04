@@ -16,8 +16,10 @@ class TbdProjectProject(models.Model):
     @api.model
     def create(self, vals):
         contract_contract = self.env['contract.contract'].search_read([('id', '=', vals['mymob_market'])])
-        vals['mymob_client'] = contract_contract[0].partner_id
-        vals['partner_id'] = contract_contract[0].partner_id
+        _logger.critical(contract_contract[0])
+        vals['mymob_client'] = contract_contract[0]['partner_id'][0]
+        _logger.critical(vals)
+        vals['partner_id'] = contract_contract[0]['partner_id'][0]
         _logger.critical(vals)
         return super(TbdProjectProject, self).create(vals)
 
