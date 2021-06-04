@@ -31,7 +31,6 @@
                                 <field name="mymob_agency"/>
                                 <field name="date_start"/>
                                 <field name="date"/>
-                                <a class="o_kanban_manage_toggle_button o_left" href="#" groups="project.group_project_manager"><i class="fa fa-ellipsis-v" role="img" aria-label="Manage" title="Manage"/></a>
                             </tree>
                         </field>
                     </page>
