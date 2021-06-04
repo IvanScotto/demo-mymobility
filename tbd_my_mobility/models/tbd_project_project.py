@@ -17,6 +17,7 @@ class TbdProjectProject(models.Model):
     def create(self, vals):
         if self.mymob_market.partner_id:
             vals['mymob_client'] = self.mymob_market.partner_id
+            vals['partner_id'] = self.mymob_market.partner_id
         return super(TbdProjectProject, self).create(vals)
 
     # @api.onchange('partner_id')
