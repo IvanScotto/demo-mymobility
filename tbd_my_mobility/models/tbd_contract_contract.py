@@ -19,18 +19,21 @@ class TbdContractContract(models.Model):
         copy=True,
     )
     mymob_lots = fields.One2many(comodel_name='project.project', inverse_name='mymob_market', string='Lots')
+    mymob_client = fields.One2many(comodel_name='project.project', inverse_name='mymob_client', string='Client')
 
     @api.onchange('partner_id')
     def onchange_partner_id(self):
         if not self.partner_id:
             self.update({
-                'mymob_partner_invoice_id': False
+                'mymob_partner_invoice_id': False,
+                'mymob_client': False
             })
             return
 
         addr = self.partner_id.address_get(['invoice'])
         values = {
-            'mymob_partner_invoice_id': addr['invoice']
+            'mymob_partner_invoice_id': addr['invoice'],
+            'mymob_client': self.partner_id
         }
         self.update(values)
 
