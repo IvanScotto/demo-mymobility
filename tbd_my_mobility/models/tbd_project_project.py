@@ -12,7 +12,7 @@ class TbdProjectProject(models.Model):
     mymob_agency = fields.Many2many('hr.department', string='Etablissement d\'agence')
     # mymob_client = fields.Many2one('res.partner', string='Client', required=True, readonly=True)
     mymob_market = fields.Many2one('contract.contract', string='Marché', required=True, readonly=True)
-    mymob_client = fields.One2Many(comodel_name='contract.contract', inverse_name='partner_id', string='Client')
+    mymob_client = fields.One2many(comodel_name='contract.contract', inverse_name='partner_id', string='Client')
 
     @api.onchange('partner_id')
     def onchange_parner_id(self):
