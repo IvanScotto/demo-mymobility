@@ -8,8 +8,8 @@
             <data>
                 <xpath expr="//field[@name='user_id']" position="after">
                      <field name="mymob_agency" required="0"/>
-                     <field name="mymob_client" required="1"/>
-                     <field name="mymob_market" required="1"/>
+                     <field name="mymob_client" required="0"/>
+                     <field name="mymob_market" required="0"/>
                 </xpath>
             </data>
         </field>
