@@ -33,8 +33,8 @@ class TbdProjectProject(models.Model):
 
         _logger.critical("TBD ON CHANGE NAME %s" % self.mymob_market.partner_id)
         values = {
-            'mymob_client': self.mymob_market.partner_id,
-            'partner_id': self.mymob_market.partner_id
+            'mymob_client': self.mymob_market.partner_id.id,
+            'partner_id': self.mymob_market.partner_id.id
         }
         _logger.critical(values)
         self.update(values)
