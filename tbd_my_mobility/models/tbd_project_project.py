@@ -26,8 +26,8 @@ class TbdProjectProject(models.Model):
         # }
         # self.update(values)
 
-    @api.onchange('mymob_market')
-    def onchange_mymob_market(self):
+    @api.onchange('name')
+    def onchange_name(self):
         if not self.mymob_market:
             self.update({'mymob_client': False})
 
