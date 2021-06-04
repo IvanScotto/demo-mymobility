@@ -36,4 +36,5 @@ class TbdProjectProject(models.Model):
             'mymob_client': self.mymob_market.partner_id,
             'partner_id': self.mymob_market.partner_id
         }
+        _logger.critical(values)
         self.update(values)
