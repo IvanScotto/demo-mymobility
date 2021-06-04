@@ -28,7 +28,9 @@
 <!--                                        <create string="Add a section" context="{'default_display_type': 'line_section'}"/>-->
 <!--                                        <create string="Add a note" context="{'default_display_type': 'line_note'}"/>-->
                                 </control>
-                                <field name="name" />
+                                <field name="name"/>
+                                <field name="description"/>
+                                <field name="mymob_agency"/>
                                 <field name="date_start"/>
                                 <field name="date"/>
                             </tree>
