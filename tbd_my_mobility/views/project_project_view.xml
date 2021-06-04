@@ -24,8 +24,8 @@
                 <xpath expr="//div[@name='options_active']" position="before">
                     <div>
                         <field name="mymob_agency" required="0"/>
-                        <field name="mymob_client" required="1"/>
-                        <field name="mymob_market" required="1"/>
+                        <field name="mymob_client" required="0"/>
+                        <field name="mymob_market" required="0"/>
                     </div>
                 </xpath>
             </data>

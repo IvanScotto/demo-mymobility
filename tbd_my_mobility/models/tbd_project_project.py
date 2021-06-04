@@ -31,10 +31,10 @@ class TbdProjectProject(models.Model):
         if not self.mymob_market:
             self.update({'mymob_client': False})
 
-        _logger.critical("TBD ON CHANGE NAME %s" % self.mymob_market.partner_id)
-        values = {
-            'mymob_client': self.mymob_market.partner_id.id,
-            'partner_id': self.mymob_market.partner_id.id
-        }
-        _logger.critical(values)
-        self.update(values)
+        _logger.critical("TBD ON CHANGE TOTO  NAME %s" % self.mymob_market.partner_id)
+        # values = {
+        #     'mymob_client': self.mymob_market.partner_id.id,
+        #     'partner_id': self.mymob_market.partner_id.id
+        # }
+        # _logger.critical(values)
+        # self.update(values)
