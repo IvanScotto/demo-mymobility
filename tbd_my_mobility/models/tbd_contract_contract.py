@@ -10,8 +10,7 @@ class TbdContractContract(models.Model):
 
     _inherit = "contract.contract"
 
-    mymob_partner_invoice_id = fields.Many2one(
-        'res.partner', string='Invoice Address')
+    mymob_partner_invoice_id = fields.Many2one('res.partner', string='Invoice Address')
     mymob_lots = fields.One2many(comodel_name='project.project', inverse_name='mymob_market', string='Lots')
 
     @api.onchange('partner_id')
