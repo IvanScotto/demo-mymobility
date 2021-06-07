@@ -14,42 +14,37 @@ class TbdContractContract(models.Model):
     mymob_lots = fields.One2many(comodel_name='project.project', inverse_name='mymob_market', string='Lots')
 
     mymob_lots_count = fields.Integer(compute="_compute_lots_count")
+    mymob_agency_count = fields.Integer(compute="_compute_agency_count")
+
+    def _compute_agency_count(self):
+        for rec in self:
+            rec.mymob_agency_count = self.env['project.project'].search_count([('mymob_agency', '=', self.id)])
 
     def _compute_lots_count(self):
         for rec in self:
-            rec.mymob_lots_count = len(rec._get_related_lots())
+            rec.mymob_lots_count = self.env['project.project'].search_count([('mymob_market', '=', self.id)])
 
-    def _get_related_lots(self):
+    def action_show_agency(self):
         self.ensure_one()
-
-        lots = (
-            self.env["project.project"]
-            .search(
-                [
-                    (
-                        "mymob_market",
-                        "=",
-                        self.id,
-                    )
-                ]
-            ).mapped("id")
-        )
-        return lots
+        return {
+            'type': 'ir.actions.act_window',
+            'name': _('Agency'),
+            'view_mode': 'tree',
+            'res_model': 'project.project',
+            'domain': [('mymob_agency', '=', self.id)],
+            'context': "{'create': False}"
+        }
 
     def action_show_lots(self):
         self.ensure_one()
-        tree_view = self.env.ref("project.project_project_view_form_simplified", raise_if_not_found=False)
-        form_view = self.env.ref("project.edit_project", raise_if_not_found=False)
-        action = {
-            "type": "ir.actions.act_window",
-            "name": "Lots",
-            "res_model": "project.project",
-            "view_mode": "tree,kanban,form,calendar,pivot,graph,activity",
-            "domain": [("id", "in", self._get_related_lots().ids)],
+        return {
+            'type': 'ir.actions.act_window',
+            'name': _('Lots'),
+            'view_mode': 'tree',
+            'res_model': 'project.project',
+            'domain': [('mymob_market', '=', self.id)],
+            'context': "{'create': False}"
         }
-        if tree_view and form_view:
-            action["views"] = [(tree_view.id, "tree"), (form_view.id, "form")]
-        return action
 
     @api.onchange('partner_id')
     def onchange_partner_id(self):
