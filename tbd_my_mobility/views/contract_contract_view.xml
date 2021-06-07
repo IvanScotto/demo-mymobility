@@ -50,8 +50,6 @@
                         >
                             <field
                                 string="Agency"
-                                name="mymob_agency_count"
-                                widget="statinfo"
                             />
                     </button>
                     <button name="action_show_lots"

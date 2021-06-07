@@ -14,11 +14,6 @@ class TbdContractContract(models.Model):
     mymob_lots = fields.One2many(comodel_name='project.project', inverse_name='mymob_market', string='Lots')
 
     mymob_lots_count = fields.Integer(compute="_compute_lots_count")
-    mymob_agency_count = fields.Integer(compute="_compute_agency_count")
-
-    def _compute_agency_count(self):
-        for rec in self:
-            rec.mymob_agency_count = self.env['project.project'].search_count([('mymob_agency', '=', self.id)])
 
     def _compute_lots_count(self):
         for rec in self:
@@ -30,8 +25,7 @@ class TbdContractContract(models.Model):
             'type': 'ir.actions.act_window',
             'name': _('Agency'),
             'view_mode': 'tree',
-            'res_model': 'project.project',
-            'domain': [('mymob_agency', '=', self.id)],
+            'res_model': 'hr.department',
             'context': "{'create': False}"
         }
 
