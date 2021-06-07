@@ -28,7 +28,7 @@ class TbdContractContract(models.Model):
                 [
                     (
                         "mymob_market",
-                        "in",
+                        "=",
                         self.id,
                     )
                 ]
