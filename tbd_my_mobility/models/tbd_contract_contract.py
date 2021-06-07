@@ -36,6 +36,21 @@ class TbdContractContract(models.Model):
         )
         return lots
 
+    def action_show_lots(self):
+        self.ensure_one()
+        tree_view = self.env.ref("project.project_project_view_form_simplified", raise_if_not_found=False)
+        form_view = self.env.ref("project.edit_project", raise_if_not_found=False)
+        action = {
+            "type": "ir.actions.act_window",
+            "name": "Lots",
+            "res_model": "project.project",
+            "view_mode": "tree,kanban,form,calendar,pivot,graph,activity",
+            "domain": [("id", "in", self._get_related_lots().ids)],
+        }
+        if tree_view and form_view:
+            action["views"] = [(tree_view.id, "tree"), (form_view.id, "form")]
+        return action
+
     @api.onchange('partner_id')
     def onchange_partner_id(self):
         if not self.partner_id:
