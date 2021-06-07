@@ -21,14 +21,15 @@
             <data>
                 <xpath expr="//page[@name='recurring_invoice_line']" position="before">
                     <page name="lot" string="Lots">
-                        <field name="mymob_lots" widget="section_and_note_one2many">
+<!--                        <field name="mymob_lots" widget="section_and_note_one2many">-->
+                        <field name="mymob_lots" widget="one2many">
                             <tree editable="bottom">
                                 <control>
                                     <create string="Add a line" />
                                 </control>
                                 <field name="name"/>
-<!--                                <field name="description"/>-->
-<!--                                <field name="mymob_agency"/>-->
+                                <field name="description"/>
+                                <field name="mymob_agency"/>
                                 <field name="date_start"/>
                                 <field name="date"/>
                             </tree>
