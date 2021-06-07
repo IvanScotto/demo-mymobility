@@ -46,7 +46,7 @@
                         >
                             <field
                                 string="Lots"
-                                name="lots_count"
+                                name="mymob_lots_count"
                                 widget="statinfo"
                             />
                     </button>
