@@ -12,7 +12,6 @@ class TbdContractContract(models.Model):
 
     mymob_partner_invoice_id = fields.Many2one('res.partner', string='Invoice Address')
     mymob_lots = fields.One2many(comodel_name='project.project', inverse_name='mymob_market', string='Lots')
-    mymob_agency_count = fields.Integer(default=1)
 
     mymob_lots_count = fields.Integer(compute="_compute_lots_count")
 
