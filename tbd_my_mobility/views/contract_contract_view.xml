@@ -27,8 +27,8 @@
                                     <create string="Add a line" />
                                 </control>
                                 <field name="name"/>
-                                <field name="description"/>
-                                <field name="mymob_agency"/>
+<!--                                <field name="description"/>-->
+<!--                                <field name="mymob_agency"/>-->
                                 <field name="date_start"/>
                                 <field name="date"/>
                             </tree>
