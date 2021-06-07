@@ -29,7 +29,7 @@
                                 </control>
                                 <field name="name"/>
                                 <field name="description"/>
-                                <field name="mymob_agency"/>
+                                <field name="mymob_agency" widget="many2many_tags"/>
                                 <field name="date_start"/>
                                 <field name="date"/>
                             </tree>
