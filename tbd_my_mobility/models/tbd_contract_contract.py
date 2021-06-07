@@ -32,7 +32,7 @@ class TbdContractContract(models.Model):
                         self.id,
                     )
                 ]
-            )
+            ).mapped("id")
         )
         return lots
 
