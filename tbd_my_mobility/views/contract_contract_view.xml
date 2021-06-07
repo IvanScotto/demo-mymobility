@@ -35,9 +35,6 @@
                             </tree>
                         </field>
                     </page>
-                    <page name="map" string="MAPS">
-<!--                        <field name="google_map_partner" widget="map"  nolabel="1"/>-->
-                    </page>
                 </xpath>
 
 
@@ -48,9 +45,6 @@
                             icon="fa-building-o"
                             class="oe_stat_button"
                         >
-                            <field
-                                string="Agency"
-                            />
                     </button>
                     <button name="action_show_lots"
                             type="object"
