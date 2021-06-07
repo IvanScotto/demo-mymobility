@@ -45,6 +45,7 @@
                             icon="fa-building-o"
                             class="oe_stat_button"
                         >
+                        <field string="Agency"/>
                     </button>
                     <button name="action_show_lots"
                             type="object"
