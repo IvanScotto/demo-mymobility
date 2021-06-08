@@ -24,7 +24,7 @@
                 <xpath expr="//div[@name='privacy_visibility']" position="before">
                     <div>
                         <field name="mymob_agency" required="0"/>
-                        <field name="mymob_market" required="0"/>
+                        <field name="mymob_market" />
                         <field name="mymob_school" widget="many2many_tags"/>
                     </div>
                 </xpath>
