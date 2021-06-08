@@ -14,8 +14,8 @@ class TbdProjectProject(models.Model):
     mymob_agency = fields.Many2one('hr.department', string='Etablissement d\'agence')
     mymob_market = fields.Many2one('contract.contract', string='Marché', readonly=True)
     mymob_map = fields.Many2one('res.partner', string='map address')
-    test_long = fields.Integer(default=150)
-    test_lat = fields.Integer(default=150)
+    test_long = fields.Float(default=47.115983)
+    test_lat = fields.Float(default=2.782795)
 
     @api.onchange('user_id')
     def onchange_partner_id(self):
