@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_map_widgetmap_widget,map_widget.map_widget,model_map_widget_map_widget,base.group_user,1,1,1,1
+access_map_widgetmap_map,maps.maps,model_maps_maps,base.group_user,1,1,1,1

@@ -1,0 +1,43 @@
+.gmap_field {
+  display: block !important;
+  div[data-wk-name^="map"] {
+    height: 15rem;
+  }
+}
+
+.map_btn_class {
+  border: 1px solid #dee2e6;
+  margin-right: 15px;
+  &:hover {
+    background: #ececec;
+  }
+}
+
+.map_area {
+  .map_group {
+    position: relative;
+    .pull-right.d-flex.flex-column {
+      position: absolute;
+      right: 0;
+      z-index: 1;
+      height: 75px;
+      justify-content: space-between;
+      background: #7e98bd;
+      padding: 10px 2px;
+      .fa {
+        color: #ffffff;
+      }
+    }
+  }
+  .demo {
+    height: 20rem;
+  }
+  .fa {
+    cursor: pointer;
+  }
+}
+
+#open_street_map {
+  width: 100%;
+  height: 24rem;
+}

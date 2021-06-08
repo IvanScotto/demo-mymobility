@@ -1,0 +1,47 @@
+<odoo>
+  <data>
+    <record id="wk_map_widget_form_view" model="ir.ui.view">
+      <field name="name">Map Widget Form</field>
+      <field name="model">map_widget.map_widget</field>
+      <field name="arch" type="xml">
+        <form string="Choose Coordinates" name="cordinates">
+          <group col="4" string="Choose your longitude and latitude">
+            <field name="longitude" required="1"/>
+            <field name="latitude" required="1"/>
+          </group>
+        </form>
+      </field>
+    </record>
+
+    <record id="wk_map_data_form_view" model="ir.ui.view">
+      <field name="name">Map Data Form</field>
+      <field name="model">maps.maps</field>
+      <field name="arch" type="xml">
+        <form string="Choose Coordinates" name="cordinates">
+          <group col="4" string="Choose your longitude and latitude">
+            <field name="longitude" required="1"/>
+            <field name="latitude" required="1"/>
+          </group>
+        </form>
+      </field>
+    </record>
+
+    <record id="wk_map_widget_action" model="ir.actions.act_window">
+      <field name="name">Map Widget Form</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">map_widget.map_widget</field>
+      <field name="view_mode">form</field>
+      <field name="target">new</field>
+      <field name="view_id" ref="odoo_map_widget.wk_map_widget_form_view" />
+    </record>
+
+    <record id="wk_map_data_action" model="ir.actions.act_window">
+      <field name="name">Map Data Action</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">maps.maps</field>
+      <field name="view_mode">form</field>
+      <field name="target">new</field>
+      <field name="view_id" ref="odoo_map_widget.wk_map_data_form_view" />
+    </record>
+  </data>
+</odoo>

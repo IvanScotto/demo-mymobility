@@ -1,0 +1,157 @@
+<odoo>
+  <data>
+
+    <template id="openstreet_map">
+      <div class="tab-pane" id="gmap_widget_pane">
+        <div class="map_area mb-3 p-3" style="border:1px solid;">
+          <t t-if="map_data">
+            <t t-foreach="map_data" t-as="loc">
+              <div class="map_group" t-attf-data-record-id="{{loc.id}}" t-att-data-model="location_data.model_name" t-att-data-model-id="loc.record_id">
+                <div class="pull-right d-flex flex-column">
+                  <i class="js_edit_map fa fa-edit ml-2" title="Edit Location" />
+                  <i class="js_add_map fa fa-plus ml-2" title="Add a new Map" />
+                  <i class="js_delete_map fa fa-trash ml-2" title="Delete Map" />
+                </div>
+                <div t-attf-id="open_street_map_{{loc.id}}" class="demo mt-2 open_street_map" data-wk-name="map" t-attf-data-lat="{{loc.latitude}}" t-attf-data-lng="{{loc.longitude}}" />
+              </div>
+            </t>
+          </t>
+          <t t-elif="is_active == True">
+            <div class="map_group text-center" t-att-data-model="model_name" t-att-data-model-id="record_id">
+              <button class="btn btn-success js_add_map">Add a new map</button>
+            </div>
+          </t>
+        </div>
+      </div>
+      <script type="text/javascript" src="/odoo_map_widget/static/src/lib/ol.js"></script>
+    </template>
+
+    <template id="openstreet_map_with_notebook">
+      <div class="o_notebook">
+        <div class="o_notebook_headers">
+          <ul class="nav nav-tabs">
+            <li class='nav-item'>
+              <a data-toggle='tab' disable_anchor='true' href='#gmap_widget_pane' class='nav-link' role='tab' aria-selected='false'>Maps</a>
+            </li>
+          </ul>
+        </div>
+        <div class="tab-pane" id="gmap_widget_pane">
+          <div class="map_area mb-3 p-3" style="border:1px solid;">
+            <t t-if="map_data">
+              <t t-foreach="map_data" t-as="loc">
+                <div class="map_group" t-attf-data-record-id="{{loc.id}}" t-att-data-model="location_data.model_name" t-att-data-model-id="loc.record_id">
+                  <div class="pull-right d-flex flex-column">
+                    <i class="js_edit_map fa fa-edit ml-2" title="Edit Location" />
+                    <i class="js_add_map fa fa-plus ml-2" title="Add a new Map" />
+                    <i class="js_delete_map fa fa-trash ml-2" title="Delete Map" />
+                  </div>
+                  <div t-attf-id="open_street_map_{{loc.id}}" class="demo mt-2 open_street_map" data-wk-name="map" t-attf-data-lat="{{loc.latitude}}" t-attf-data-lng="{{loc.longitude}}" />
+                </div>
+              </t>
+            </t>
+            <t t-elif="is_active == True">
+              <div class="map_group text-center" t-att-data-model="model_name" t-att-data-model-id="record_id">
+                <button class="btn btn-success js_add_map">Add a new map</button>
+              </div>
+            </t>
+          </div>
+        </div>
+      </div>
+      <script type="text/javascript" src="/odoo_map_widget/static/src/lib/ol.js"></script>
+    </template>
+
+    <template id="wk_google_map">
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=default" />
+      <t t-set="google_maps_api_key" t-value="request.env['ir.config_parameter'].sudo().get_param('base_geolocalize.google_map_api_key')" />
+      <t t-if="google_maps_api_key">
+        <script t-if="script_loaded" t-attf-src="https://maps.googleapis.com/maps/api/js?key={{google_maps_api_key}}&amp;callback=initMap&amp;libraries=&amp;v=weekly" defer="1" />
+      </t>
+      <t t-else=" ">
+        <span>Invalid google maps api key or Maps is not enabled for given key</span>
+      </t>
+      <div t-if="google_maps_api_key" t-attf-id="map{{name}}" class="demo" data-wk-name="map" t-att-data-field-lat="field_lat" t-att-data-field-lng="field_lng" />
+
+    </template>
+
+    <template id="wk_openstreet_map">
+      <div t-attf-id="open_street_map_{{name}}" class="demo open_street_map" t-attf-data-field-name="{{name}}" data-wk-name="map" t-att-data-field-lat="field_lat" t-att-data-field-lng="field_lng" />
+      <script type="text/javascript" src="/odoo_map_widget/static/src/lib/ol.js"></script>
+    </template>
+
+    <template id="google_map_widget">
+      <div class="tab-pane" id="gmap_widget_pane">
+        <div class="map_area mb-3 p-3" style="border:1px solid;">
+          <script src="https://polyfill.io/v3/polyfill.min.js?features=default" />
+          <t t-set="google_maps_api_key" t-value="request.env['ir.config_parameter'].sudo().get_param('base_geolocalize.google_map_api_key')" />
+          <t t-if="google_maps_api_key">
+            <script t-attf-src="https://maps.googleapis.com/maps/api/js?key={{google_maps_api_key}}&amp;callback=initMap&amp;libraries=&amp;v=weekly" defer="1" />
+          </t>
+          <t t-else=" ">
+            <span>Invalid google maps api key or Maps is not enabled for given key</span>
+          </t>
+
+          <t t-if="map_data">
+            <t t-foreach="map_data" t-as="loc">
+              <div class="map_group" t-attf-data-record-id="{{loc.id}}" t-att-data-model="location_data.model_name" t-att-data-model-id="loc.record_id">
+                <div t-if="google_maps_api_key" class="pull-right d-flex flex-column">
+                  <i class="js_edit_map fa fa-edit ml-2" title="Edit Location" />
+                  <i class="js_add_map fa fa-plus ml-2" title="Add a new Map" />
+                  <i class="js_delete_map fa fa-trash ml-2" title="Delete Map" />
+                </div>
+                <div t-attf-id="map_{{loc.id}}" class="demo mt-2" data-wk-name="map" t-attf-data-lat="{{loc.latitude}}" t-attf-data-lng="{{loc.longitude}}" />
+              </div>
+            </t>
+          </t>
+          <t t-elif="is_active == True">
+            <div class="map_group text-center" t-att-data-model="model_name" t-att-data-model-id="record_id">
+              <button class="btn btn-success js_add_map">Add a new map</button>
+            </div>
+          </t>
+        </div>
+      </div>
+    </template>
+
+    <template id="google_map_widget_with_notebook">
+      <div class="o_notebook">
+        <div class="o_notebook_headers">
+          <ul class="nav nav-tabs">
+            <li class='nav-item'>
+              <a data-toggle='tab' disable_anchor='true' href='#gmap_widget_pane' class='nav-link' role='tab' aria-selected='false'>Maps</a>
+            </li>
+          </ul>
+        </div>
+        <div class="tab-pane" id="gmap_widget_pane">
+          <div class="map_area mb-3 p-3" style="border:1px solid;">
+            <script src="https://polyfill.io/v3/polyfill.min.js?features=default" />
+            <t t-set="google_maps_api_key" t-value="request.env['ir.config_parameter'].sudo().get_param('base_geolocalize.google_map_api_key')" />
+            <t t-if="google_maps_api_key">
+              <script t-attf-src="https://maps.googleapis.com/maps/api/js?key={{google_maps_api_key}}&amp;callback=initMap&amp;libraries=&amp;v=weekly" defer="1" />
+            </t>
+            <t t-else=" ">
+              <span>Invalid google maps api key or Maps is not enabled for given key</span>
+            </t>
+
+            <t t-if="map_data">
+              <t t-foreach="map_data" t-as="loc">
+                <div class="map_group" t-attf-data-record-id="{{loc.id}}" t-att-data-model="location_data.model_name" t-att-data-model-id="loc.record_id">
+                  <div t-if="google_maps_api_key" class="pull-right d-flex flex-column">
+                    <i class="js_edit_map fa fa-edit ml-2" title="Edit Location" />
+                    <i class="js_add_map fa fa-plus ml-2" title="Add a new Map" />
+                    <i class="js_delete_map fa fa-trash ml-2" title="Delete Map" />
+                  </div>
+                  <div t-attf-id="map_{{loc.id}}" class="demo mt-2" data-wk-name="map" t-attf-data-lat="{{loc.latitude}}" t-attf-data-lng="{{loc.longitude}}" />
+                </div>
+              </t>
+            </t>
+            <t t-elif="is_active == True">
+              <div class="map_group text-center" t-att-data-model="model_name" t-att-data-model-id="record_id">
+                <button class="btn btn-success js_add_map">Add a new map</button>
+              </div>
+            </t>
+
+          </div>
+        </div>
+      </div>
+    </template>
+  </data>
+</odoo>

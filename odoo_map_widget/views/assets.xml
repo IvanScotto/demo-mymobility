@@ -1,0 +1,14 @@
+<!-- Copyright (c) 2017-Present Webkul Software Pvt. Ltd. (<https://webkul.com/>) -->
+<!-- See LICENSE URL <https://store.webkul.com/license.html/> for full copyright and licensing details. -->
+<odoo>
+    <data>
+      <template id="odoo_map_widget_backend" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+          <script type="text/javascript" src="/odoo_map_widget/static/src/js/map_widget.js"></script>
+          <script type="text/javascript" src="/odoo_map_widget/static/src/js/form.js"></script>
+          <link rel="stylesheet" type="text/scss" href="/odoo_map_widget/static/src/scss/map.scss"/>
+          <link rel="stylesheet" type="text/css" href="/odoo_map_widget/static/src/lib/ol.css"/>          
+        </xpath>
+      </template>
+    </data>
+  </odoo>
