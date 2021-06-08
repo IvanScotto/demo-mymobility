@@ -21,7 +21,7 @@
         <field name="inherit_id" ref="project.edit_project"/>
         <field name="arch" type="xml">
             <data>
-                <xpath expr="//div[@name='privacy_visibility']" position="before">
+                <xpath expr="//field[@name='privacy_visibility']" position="before">
                     <div>
                         <field name="mymob_agency" required="0"/>
                         <field name="mymob_market" />
