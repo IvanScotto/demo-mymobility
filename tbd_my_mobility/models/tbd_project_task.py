@@ -58,4 +58,4 @@ class TbdProjectTask(models.Model):
         ('go', 'Aller'),
         ('return', 'Retour')
     ]
-    mymob_direction = fields.Select(select_direction, string='Sens du trajet')
+    mymob_direction = fields.Selection(select_direction, string='Sens du trajet')
