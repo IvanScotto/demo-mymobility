@@ -38,7 +38,7 @@ class TbdContractContract(models.Model):
             'view_mode': 'tree',
             'res_model': 'project.project',
             'domain': [('mymob_market', '=', self.id)],
-            'context': "{'create': True}"
+            'context': "{'create': True, 'edit': True}"
         }
 
     @api.onchange('partner_id')

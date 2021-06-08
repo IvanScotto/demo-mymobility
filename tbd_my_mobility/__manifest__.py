@@ -39,6 +39,9 @@
     ],
     'demo': [
     ],
+    'qweb': [
+        'static/src/xml/import_button.xml'
+    ],
     'application': True,
     'installable': True,
     'active': True

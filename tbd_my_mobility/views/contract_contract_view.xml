@@ -45,7 +45,7 @@
                             type="object"
                             icon="fa-building-o"
                             class="oe_stat_button"
-                        >Etablissement <br/> scolaire
+                        >Etabli. scolaire
                     </button>
                     <button name="action_show_lots"
                             type="object"

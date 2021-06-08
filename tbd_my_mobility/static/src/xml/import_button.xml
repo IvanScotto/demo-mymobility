@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates>
+    <t t-extend="ListView.buttons">
+       <t t-jquery="button.oe_list_add" t-operation="after">
+           <button type="button" class="dropdown-item" t-on-click="_onImportClick">
+                Import records
+            </button>
+        </t>
+    </t>
+</templates>
