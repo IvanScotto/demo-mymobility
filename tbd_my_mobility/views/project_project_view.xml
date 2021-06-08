@@ -30,7 +30,7 @@
                 </xpath>
                 <xpath expr="//page[@name='settings']" position="after">
                     <page name="maps" string="Maps">
-                        <field name="mymob_map" widget="gmap_widget" lat="test_lat" lng="test_long"/>
+                        <field name="mymob_map" widget="gmap_widget" lat="47.115983" lng="2.782795"/>
                     </page>
                 </xpath>
                 <xpath expr="//field[@name='user_id']" position="attributes">
