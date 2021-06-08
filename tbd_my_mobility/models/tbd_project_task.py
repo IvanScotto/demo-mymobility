@@ -53,3 +53,9 @@ class TbdProjectTask(models.Model):
     mymob_end_time = fields.Datetime('Horaire de fin')
 
     mymob_partner_invoice_id = fields.Many2one('res.partner', string='Invoice Address')
+
+    select_direction = [
+        ('go', 'Aller'),
+        ('return', 'Retour')
+    ]
+    mymob_direction = fields.Select(select_direction, string='Sens du trajet')
