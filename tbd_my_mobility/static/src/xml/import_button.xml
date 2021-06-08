@@ -2,9 +2,11 @@
 <templates>
     <t t-extend="ListView.buttons">
        <t t-jquery="button.o_list_button_add" t-operation="after">
-           <button type="button" class="dropdown-item" t-on-click="_onImportClick">
-                Import records
-            </button>
+            <li class="o_menu_item o_import_menu" role="menuitem">
+                <button type="button" class="dropdown-item" t-on-click="_onImportClick">
+                    Import records
+                </button>
+            </li>
         </t>
     </t>
 </templates>
