@@ -23,10 +23,15 @@
             <data>
                 <xpath expr="//field[@name='privacy_visibility']" position="before">
                     <div>
-                        <field name="mymob_agency" required="0">Agence</field>
-                        <field name="mymob_market" >Marché</field>
-                        <field name="mymob_school" widget="many2many_tags">Etablissement scolaire</field>
+                        <field name="mymob_agency" required="0"/>
+                        <field name="mymob_market" />
+                        <field name="mymob_school" widget="many2many_tags"/>
                     </div>
+                </xpath>
+                <xpath expr="//page[@name='settings']" position="after">
+                    <page name="maps" string="Maps">
+                        <field name="your_field" widget="gmap_widget" lat="latitude_filed" lng="longitude_field"/>
+                    </page>
                 </xpath>
             </data>
         </field>
