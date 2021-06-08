@@ -9,7 +9,9 @@ _logger = logging.getLogger(__name__)
 class TbdProjectProject(models.Model):
     _inherit = "project.project"
 
-    mymob_agency = fields.Many2many('hr.department', string='Etablissement d\'agence')
+    mymob_school = fields.Many2Many('res.partner', string='Etablissement scolaire',
+                                    domain=[('mymob_partner_type', '=', 'school'), ])
+    mymob_agency = fields.Many2one('hr.department', string='Etablissement d\'agence')
     mymob_market = fields.Many2one('contract.contract', string='Marché', readonly=True)
 
     @api.model

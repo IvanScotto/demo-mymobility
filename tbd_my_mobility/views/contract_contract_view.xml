@@ -29,7 +29,8 @@
                                 </control>
                                 <field name="name"/>
                                 <field name="description"/>
-                                <field name="mymob_agency" widget="many2many_tags"  options="{'no_create_edit': False, 'no_quick_create': False}" />
+                                <field name="mymob_school" widget="many2many_tags"  options="{'no_create_edit': False, 'no_quick_create': False}" />
+                                <field name="mymob_agency"/>
                                 <field name="date_start"/>
                                 <field name="date"/>
                             </tree>
@@ -40,11 +41,11 @@
 
                 <!--    Button & count  Lots            -->
                 <xpath expr="//button[@name='action_show_invoices']" position="before">
-                    <button name="action_show_agency"
+                    <button name="action_show_school"
                             type="object"
                             icon="fa-building-o"
                             class="oe_stat_button"
-                        >Agency
+                        >Etablissement scolaire
                     </button>
                     <button name="action_show_lots"
                             type="object"

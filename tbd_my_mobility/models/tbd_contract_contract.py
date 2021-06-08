@@ -19,14 +19,15 @@ class TbdContractContract(models.Model):
         for rec in self:
             rec.mymob_lots_count = self.env['project.project'].search_count([('mymob_market', '=', self.id)])
 
-    def action_show_agency(self):
+    def action_show_school(self):
         self.ensure_one()
         return {
             'type': 'ir.actions.act_window',
-            'name': _('Agency'),
+            'name': _('School'),
             'view_mode': 'tree',
-            'res_model': 'hr.department',
-            'context': "{'create': False}"
+            'res_model': 'res.partner',
+            'domain': [('mymob_partner_type', '=', 'school')],
+            'context': "{'create': True}"
         }
 
     def action_show_lots(self):
@@ -37,7 +38,7 @@ class TbdContractContract(models.Model):
             'view_mode': 'tree',
             'res_model': 'project.project',
             'domain': [('mymob_market', '=', self.id)],
-            'context': "{'create': False}"
+            'context': "{'create': True}"
         }
 
     @api.onchange('partner_id')
