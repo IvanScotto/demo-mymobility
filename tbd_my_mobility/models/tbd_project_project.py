@@ -13,6 +13,21 @@ class TbdProjectProject(models.Model):
                                     domain=[('mymob_partner_type', '=', 'school'), ])
     mymob_agency = fields.Many2one('hr.department', string='Etablissement d\'agence')
     mymob_market = fields.Many2one('contract.contract', string='Marché', readonly=True)
+    mymob_map = fields.Many2one('res.partner', string='map address')
+
+    @api.onchange('user_id')
+    def onchange_partner_id(self):
+        if not self.partner_id:
+            self.update({
+                'mymob_map': False
+            })
+            return
+
+        addr = self.partner_id.address_get()
+        values = {
+            'mymob_map': addr['default']
+        }
+        self.update(values)
 
     @api.model
     def create(self, vals):
