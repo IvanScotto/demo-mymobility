@@ -52,6 +52,8 @@
                     <field name="mymob_start_time" />
                     <field name="mymob_end_time" />
                     <field name="mymob_partner_invoice_id" />
+                    <field name="mymob_direction" />
+                    <field name="mybmob_days"/>
                 </xpath>
             </data>
         </field>

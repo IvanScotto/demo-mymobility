@@ -6,6 +6,18 @@ from odoo import api, fields, models, _
 
 _logger = logging.getLogger(__name__)
 
+class TbdDays(models.Model):
+    _name = 'tbd.weekdays'
+    select_day = [
+        ('monday', 'Lundi'),
+        ('tuesday', 'Mardi'),
+        ('wednesday', 'Mercredi'),
+        ('thursday', 'Jeudi'),
+        ('friday', 'Vendredi'),
+        ('saturday', 'Samedi'),
+        ('sunday', 'Dimanche'),
+    ]
+    mymob_days = fields.Selection(select_day, string="Jour de la semaine")
 
 class TbdProjectTask(models.Model):
     """
@@ -59,3 +71,5 @@ class TbdProjectTask(models.Model):
         ('return', 'Retour')
     ]
     mymob_direction = fields.Selection(select_direction, string='Sens du trajet')
+
+    mybmob_days = fields.Many2many('tbd.weekdays', string='Jour de la semaine')
