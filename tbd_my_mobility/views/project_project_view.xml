@@ -26,6 +26,8 @@
                         <field name="mymob_agency" required="0" string="Agence"/>
                         <field name="mymob_market" string="Marché"/>
                         <field name="mymob_school" widget="many2many_tags" string="Etablissement scolaire"/>
+                        <field name="date_start"/>
+                        <field name="date"/>
                     </div>
                 </xpath>
                 <xpath expr="//page[@name='settings']" position="after">
