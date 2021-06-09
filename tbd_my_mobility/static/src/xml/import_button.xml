@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <templates>
+<!--    <t t-extend="ListView.buttons">-->
+<!--       <t t-jquery="button.o_list_button_add" t-operation="after">-->
+<!--            <li class="o_menu_item o_import_menu" role="menuitem">-->
+<!--                <button type="button" class="dropdown-item" onclick="jQuery('.o_import_menu').find('button').trigger('click')">-->
+<!--                    Import records-->
+<!--                </button>-->
+<!--                <button type="button" class="btn btn-primary o_data_cleaning_validate_button">-->
+<!--                Validate-->
+<!--            </button>-->
+<!--            </li>-->
+<!--        </t>-->
+<!--    </t>-->
     <t t-extend="ListView.buttons">
-       <t t-jquery="button.o_list_button_add" t-operation="after">
-            <li class="o_menu_item o_import_menu" role="menuitem">
-                <button type="button" class="dropdown-item" onclick="jQuery('.o_import_menu').find('button').trigger('click')">
-                    Import records
-                </button>
-                <button type="button" class="btn btn-primary o_data_cleaning_validate_button">
-                Validate
-            </button>
-            </li>
+        <t t-jquery="button.o_list_button_add" t-operation="after">
+           <t t-call="ImportView.import_button"/>
         </t>
     </t>
 </templates>
