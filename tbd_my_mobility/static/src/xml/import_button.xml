@@ -2,14 +2,10 @@
 <templates>
     <t t-extend="ListView.buttons">
        <t t-jquery="button.o_list_button_add" t-operation="after">
-                <button type="button" class="btn btn-primary" onclick="jQuery('.o_dropdown_title').trigger('click');jQuery('.o_favorite_menu .o_import_menu').find('button').trigger('click')">
+<!--                <button type="button" class="btn btn-primary" onclick="jQuery('.o_dropdown_title').trigger('click');sleep(100);jQuery('.o_favorite_menu .o_import_menu').find('button').trigger('click')">-->
+                <button type="button" class="btn btn-primary" onclick="jQuery('.o_dropdown_title').trigger('click');setTimeout(function() { jQuery('.o_favorite_menu .o_import_menu').find('button').trigger('click'); },200);">
                     Import records
                 </button>
         </t>
     </t>
-<!--    <t t-extend="ListView.buttons">-->
-<!--        <t t-jquery="button.o_list_button_add" t-operation="after">-->
-<!--           <t t-call="ImportView.import_button"/>-->
-<!--        </t>-->
-<!--    </t>-->
 </templates>
