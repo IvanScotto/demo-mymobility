@@ -44,6 +44,12 @@
                             class="oe_stat_button"
                         >Etabli. scolaire
                     </button>
+                    <button name="action_show_student"
+                            type="object"
+                            icon="fa-building-o"
+                            class="oe_stat_button"
+                        >Etudiant
+                    </button>
                 </xpath>
             </data>
         </field>

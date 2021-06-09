@@ -48,3 +48,14 @@ class TbdProjectProject(models.Model):
             'domain': [('mymob_partner_type', '=', 'school')],
             'context': "{'create': True}"
         }
+
+    def action_show_student(self):
+        self.ensure_one()
+        return {
+            'type': 'ir.actions.act_window',
+            'name': _('Student'),
+            'view_mode': 'tree',
+            'res_model': 'res.partner',
+            'domain': [('mymob_partner_type', '=', 'student')],
+            'context': "{'create': True}"
+        }
