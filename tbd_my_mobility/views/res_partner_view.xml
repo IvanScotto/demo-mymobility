@@ -14,7 +14,7 @@
                 <xpath expr="//field[@name='type']" position="after">
                     <group attrs="{'invisible': [('mymob_partner_type', '!=', 'customer')]}">
                         <h1>Customer</h1>
-                        <field name="mymob_sector" required="1"/>
+                        <field name="mymob_sector" required="0"/>
                         <field name="mymob_contract"/>
                     </group>
                 </xpath>
@@ -35,7 +35,9 @@
                 <xpath expr="//field[@name='type']" position="after">
                     <group attrs="{'invisible': [('mymob_partner_type', '!=', 'student')]}">
                         <h1>student</h1>
+                        <field name="mymob_school"/>
                         <field name="mymob_student_condition"/>
+                        <field name="mymob_lots"/>
                     </group>
                 </xpath>
             </data>

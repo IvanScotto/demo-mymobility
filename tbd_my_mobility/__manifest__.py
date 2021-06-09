@@ -29,7 +29,8 @@
         'website_sale',
         'partner_firstname',
         'contract',
-        'project'
+        'project',
+        'odoo_map_widget'
     ],
     'data': [
         'views/res_partner_view.xml',

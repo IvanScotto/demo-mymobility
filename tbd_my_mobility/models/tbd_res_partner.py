@@ -51,6 +51,11 @@ class TbdResPartner(models.Model):
     # TODO a definir
     mymob_school_holidays = fields.Char(default="[WIP]")
 
+    mymob_school = fields.Many2one('res.partner', string='Related School', index=True,
+                                   domain=[('mymob_partner_type', '=', 'school')])
+
+    mymob_lots = fields.Many2one('project.project', string='Lots')
+
     # @api.onchange(mymob_partner_type)
     # def on_change_mymob_partner_type(self):
     #     """ """
