@@ -20,7 +20,7 @@
                         <field name="mymob_nbr_cycle"/>
                         <field name="mymob_category_vehicle"/>
                         <field name="mymob_direction" />
-                        <field name="mybmob_days"/>
+                        <field name="mybmob_days" widget="many2many_tags"/>
                     </group>
                     <group attrs="{'invisible': [('mymob_type', '!=', 'route')]}">
                         <field name="mymob_start_time"/>
