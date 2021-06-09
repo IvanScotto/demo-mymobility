@@ -2,7 +2,7 @@
 <templates>
     <t t-extend="ListView.buttons">
        <t t-jquery="button.o_list_button_add" t-operation="after">
-                <button type="button" class="btn btn-primary" onclick="jQuery('.o_favorite_menu .o_import_menu').find('button').trigger('click')">
+                <button type="button" class="btn btn-primary" onclick="jQuery('.o_dropdown_title').trigger('click');jQuery('.o_favorite_menu .o_import_menu').find('button').trigger('click')">
                     Import records
                 </button>
         </t>
