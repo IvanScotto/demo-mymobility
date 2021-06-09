@@ -6,6 +6,7 @@ from odoo import api, fields, models, _
 
 _logger = logging.getLogger(__name__)
 
+
 class TbdDays(models.Model):
     _name = 'tbd.weekdays'
     select_day = [
@@ -18,6 +19,7 @@ class TbdDays(models.Model):
         ('sunday', 'Dimanche'),
     ]
     mymob_days = fields.Selection(select_day, string="Jour de la semaine")
+
 
 class TbdProjectTask(models.Model):
     """
