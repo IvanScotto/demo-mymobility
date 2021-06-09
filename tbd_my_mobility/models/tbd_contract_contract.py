@@ -19,16 +19,6 @@ class TbdContractContract(models.Model):
         for rec in self:
             rec.mymob_lots_count = self.env['project.project'].search_count([('mymob_market', '=', self.id)])
 
-    def action_show_school(self):
-        self.ensure_one()
-        return {
-            'type': 'ir.actions.act_window',
-            'name': _('School'),
-            'view_mode': 'tree',
-            'res_model': 'res.partner',
-            'domain': [('mymob_partner_type', '=', 'school')],
-            'context': "{'create': True}"
-        }
 
     def action_show_lots(self):
         self.ensure_one()

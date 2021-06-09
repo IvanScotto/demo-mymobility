@@ -36,6 +36,14 @@
                 <xpath expr="//field[@name='user_id']" position="attributes">
                     <attribute name="widget">many2one_avatar_user</attribute>
                 </xpath>
+                <xpath expr="//div[@name='button_box']" position="before">
+                    <button name="action_show_school"
+                            type="object"
+                            icon="fa-building-o"
+                            class="oe_stat_button"
+                        >Etabli. scolaire
+                    </button>
+                </xpath>
             </data>
         </field>
     </record>

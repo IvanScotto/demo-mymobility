@@ -37,3 +37,14 @@ class TbdProjectProject(models.Model):
         if contract_contract:
             vals['partner_id'] = contract_contract[0]['partner_id'][0]
         return super(TbdProjectProject, self).create(vals)
+
+    def action_show_school(self):
+        self.ensure_one()
+        return {
+            'type': 'ir.actions.act_window',
+            'name': _('School'),
+            'view_mode': 'tree',
+            'res_model': 'res.partner',
+            'domain': [('mymob_partner_type', '=', 'school')],
+            'context': "{'create': True}"
+        }
