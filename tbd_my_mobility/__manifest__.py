@@ -37,7 +37,7 @@
         'views/project_task_view.xml',
         'views/project_project_view.xml',
         'views/contract_contract_view.xml',
-        'security/tbd_weekdays_view.xml'
+        "security/ir.model.access.csv",
     ],
     'demo': [
     ],
