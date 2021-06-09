@@ -30,6 +30,11 @@
                         <field name="mymob_start_time"/>
                         <field name="mymob_end_time"/>
                         <field name="mymob_partner_invoice_id"/>
+                        <field name="mymob_stop_duration"/>
+                        <field name="mymob_stage_time_hour"/>
+                        <field name="mymob_stage_time_minute"/>
+                        <field name="mymob_distance_between_stage"/>
+
                     </group>
                     <group attrs="{'invisible': [('mymob_type', '!=', 'driver')]}">
                         <field name="mymob_start_time"/>

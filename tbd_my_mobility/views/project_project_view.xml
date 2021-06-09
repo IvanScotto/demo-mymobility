@@ -36,7 +36,8 @@
                 <xpath expr="//field[@name='user_id']" position="attributes">
                     <attribute name="widget">many2one_avatar_user</attribute>
                 </xpath>
-                <xpath expr="//div[@name='button_box']" position="before">
+
+                <xpath expr="//button[@name='attachment_tree_view']" position="before">
                     <button name="action_show_school"
                             type="object"
                             icon="fa-building-o"

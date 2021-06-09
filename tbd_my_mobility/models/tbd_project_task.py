@@ -73,3 +73,8 @@ class TbdProjectTask(models.Model):
     mymob_direction = fields.Selection(select_direction, string='Sens du trajet')
 
     mybmob_days = fields.Many2many('tbd.weekdays', string='Jour de la semaine')
+
+    mymob_stop_duration = fields.Integer(string='Durée de l\'arrêt')
+    mymob_stage_time_hour = fields.Integer(string='Heure de l\'étape')
+    mymob_stage_time_minute = fields.Integer(string='Minute de l\'étape')
+    mymob_distance_between_stage = fields.Float(string='Distance entre étape')
