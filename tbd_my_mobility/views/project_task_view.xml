@@ -42,6 +42,28 @@
                         <field name="mymob_partner_invoice_id"/>
                     </group>
                 </xpath>
+                <xpath expr="//field[@name='subtask_count']" position="attributes">
+                    <attribute name="string">Itinéraire</attribute>
+                </xpath>
+                <xpath expr="//page[@name='description_page']" position="after">
+                    <page name="lot" string="Lots">
+                        <field name="child_ids" widget="one2many">
+                            <tree editable="bottom">
+                                <control>
+                                    <create string="Add a line" />
+                                </control>
+                                <field name="mymob_type"/>
+                                <field name="mymob_start_time"/>
+                                <field name="mymob_end_time" />
+                                <field name="mymob_partner_invoice_id"/>
+                                <field name="mymob_stop_duration"/>
+                                <field name="mymob_stage_time_hour"/>
+                                <field name="mymob_stage_time_minute"/>
+                                <field name="mymob_distance_between_stage"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
             </data>
         </field>
     </record>
