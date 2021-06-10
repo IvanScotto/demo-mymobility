@@ -49,7 +49,7 @@
                     <attribute name="attrs">1</attribute>
                 </xpath>
                 <xpath expr="//page[@name='geo_location']" position="attributes">
-                    <attribute name="attrs">{'invisible': [('mymob_partner_type', 'in', ('society', 'customer'))]}</attribute>
+                    <attribute name="attrs">{'invisible': [('mymob_partner_type', 'in', ['society', 'customer'])]}</attribute>
                 </xpath>
             </data>
         </field>
