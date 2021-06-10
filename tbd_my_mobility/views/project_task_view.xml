@@ -42,11 +42,11 @@
                         <field name="mymob_partner_invoice_id"/>
                     </group>
                 </xpath>
-                <xpath expr="//field[@name='subtask_count']" position="attributes">
-                    <attribute name="string">Itinéraire</attribute>
-                </xpath>
+<!--                <xpath expr="//field[@name='subtask_count']" position="attributes">-->
+<!--                    <attribute name="string">Itinéraire</attribute>-->
+<!--                </xpath>-->
                 <xpath expr="//page[@name='description_page']" position="after">
-                    <page name="lot" string="Lots">
+                    <page name="route" string="Itineraire">
                         <field name="child_ids" widget="one2many">
                             <tree editable="bottom">
                                 <control>
