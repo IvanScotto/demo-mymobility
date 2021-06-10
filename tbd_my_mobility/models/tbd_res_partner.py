@@ -25,7 +25,8 @@ class TbdResPartner(models.Model):
     ]
     select_partner_individual_type = [
         ('customer', 'Client'),
-        ('student', 'Eleve')
+        ('student', 'Eleve'),
+        ('tutor', 'Tuteur')
     ]
     select_partner_type = select_partner_company_type + select_partner_individual_type
     mymob_partner_type = fields.Selection(select_partner_type, string='Res Users type')
