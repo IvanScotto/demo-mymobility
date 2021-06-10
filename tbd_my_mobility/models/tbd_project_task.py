@@ -9,6 +9,8 @@ _logger = logging.getLogger(__name__)
 
 class TbdDays(models.Model):
     _name = 'tbd.weekdays'
+    _description = 'Day of the week'
+
     select_day = [
         ('monday', 'Lundi'),
         ('tuesday', 'Mardi'),
