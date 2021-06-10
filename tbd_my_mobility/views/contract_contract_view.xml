@@ -80,6 +80,9 @@
                 <xpath expr="//page[@name='info']" position="attributes">
                     <attribute name="invisible">1</attribute>
                 </xpath>
+                <xpath expr="//group[@name='recurring_invoices']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
             </data>
         </field>
     </record>
