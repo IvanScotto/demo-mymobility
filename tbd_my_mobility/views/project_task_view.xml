@@ -25,6 +25,7 @@
                                 <field name="mymob_days"/>
                             </tree>
                         </field>
+                        <field name="mymob_student"/>
                     </group>
                     <group attrs="{'invisible': [('mymob_type', '!=', 'route')]}">
                         <field name="mymob_start_time"/>
@@ -34,32 +35,33 @@
                         <field name="mymob_stage_time_hour"/>
                         <field name="mymob_stage_time_minute"/>
                         <field name="mymob_distance_between_stage"/>
+                        <field name="mymob_student"/>
 
                     </group>
                     <group attrs="{'invisible': [('mymob_type', '!=', 'driver')]}">
                         <field name="mymob_start_time"/>
                         <field name="mymob_end_time"/>
                         <field name="mymob_partner_invoice_id"/>
+                        <field name="mymob_student"/>
                     </group>
                 </xpath>
 <!--                <xpath expr="//field[@name='subtask_count']" position="attributes">-->
 <!--                    <attribute name="string">Itinéraire</attribute>-->
 <!--                </xpath>-->
-                <xpath expr="//page[@name='description_page']" position="after">
+                <xpath expr="//page[@name='description_page']" position="before">
                     <page name="route" string="Itineraire">
-                        <field name="child_ids" widget="one2many">
+                        <field name="mymob_child_ids" mode="tree" context="{'mymob_type': 'route'}">"
                             <tree editable="bottom">
                                 <control>
                                     <create string="Add a line" />
                                 </control>
-                                <field name="mymob_type"/>
-                                <field name="mymob_start_time"/>
-                                <field name="mymob_end_time" />
+                                <field name="mymob_sequence"/>
+                                <field name="name"/>
+                                <field name="mymob_student"/>
                                 <field name="mymob_partner_invoice_id"/>
                                 <field name="mymob_stop_duration"/>
                                 <field name="mymob_stage_time_hour"/>
                                 <field name="mymob_stage_time_minute"/>
-                                <field name="mymob_distance_between_stage"/>
                             </tree>
                         </field>
                     </page>
