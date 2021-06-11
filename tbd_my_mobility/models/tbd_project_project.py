@@ -36,9 +36,10 @@ class TbdProjectProject(models.Model):
 
     @api.model
     def create(self, vals):
-        contract_contract = self.env['contract.contract'].search_read([('id', '=', vals['mymob_market'])])
-        if contract_contract:
-            vals['partner_id'] = contract_contract[0]['partner_id'][0]
+        if 'mymob_market' in vals.keys():
+            contract_contract = self.env['contract.contract'].search_read([('id', '=', vals['mymob_market'])])
+            if contract_contract:
+                vals['partner_id'] = contract_contract[0]['partner_id'][0]
         return super(TbdProjectProject, self).create(vals)
 
     def action_show_school(self):
