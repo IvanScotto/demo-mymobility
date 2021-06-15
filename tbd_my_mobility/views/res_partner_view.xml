@@ -54,8 +54,9 @@
                     <field name="mymob_street4" placeholder="Street4..." class="o_address_street"/>
                 </xpath>
                 <xpath expr="//field[@name='function']" position="after">
-                    <field name="mymob_GESCAR_reference" string="Gescar reference" attrs="{'invisible': [('mymob_partner_type', '!=', 'customer')]}"/>
-                    <field name="mymob_siren" string="SIREN"/>
+                    <field name="mymob_GESCAR_reference" string="Gescar reference" attrs="{'invisible': [('mymob_partner_type', '!=', 'customer'),('mymob_partner_type', '!=', 'school')]}"/>
+                    <field name="mymob_uai_code" string="Code UAI" attrs="{'invisible': [('mymob_partner_type', '!=', 'school')]}"/>
+                    <field name="mymob_siren" string="SIREN" attrs="{'invisible': [('mymob_partner_type', '!=', 'customer')]}"/>
                 </xpath>
                 <!-- adding to pop in form -->
                 <xpath expr="//div[@name='div_address']/field[@name='street2']" position="after">
