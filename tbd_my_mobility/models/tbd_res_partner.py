@@ -57,6 +57,8 @@ class TbdResPartner(models.Model):
 
     mymob_lots = fields.Many2one('project.project', string='Lots')
 
+    mymob_street3 = fields.Char()
+    mymob_street4 = fields.Char()
     # @api.onchange(mymob_partner_type)
     # def on_change_mymob_partner_type(self):
     #     """ """
