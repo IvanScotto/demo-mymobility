@@ -30,19 +30,16 @@ class TbdResPartner(models.Model):
     ]
     select_partner_type = select_partner_company_type + select_partner_individual_type
     mymob_partner_type = fields.Selection(select_partner_type, string='Res Users type')
-
     # TODO Remplir
     select_student_condition = [
         ('WIP', '[WIP] Student')
     ]
     mymob_student_condition = fields.Selection(select_student_condition, string='Condition')
-
     # TODO Remplir
     select_school_type = [
         ('WIP', '[WIP] School')
     ]
     mymob_school_type = fields.Selection(select_school_type, string='School type')
-
     select_vacancy_area = [
         ('a', 'Zone A'),
         ('b', 'Zone B'),
@@ -51,16 +48,13 @@ class TbdResPartner(models.Model):
     mymob_vacancy_area = fields.Selection(select_vacancy_area, string='Zone de vacance')
     # TODO a definir
     mymob_school_holidays = fields.Char(default="[WIP]")
-
     mymob_school = fields.Many2one('res.partner', string='Related School', index=True,
                                    domain=[('mymob_partner_type', '=', 'school')])
-
     mymob_lots = fields.Many2one('project.project', string='Lots')
-
     mymob_street3 = fields.Char()
     mymob_street4 = fields.Char()
-
     mymob_GESCAR_reference = fields.Char()
+    mymob_siren = fields.Char(string='SIREN', size=9)
 
     # @api.onchange(mymob_partner_type)
     # def on_change_mymob_partner_type(self):
