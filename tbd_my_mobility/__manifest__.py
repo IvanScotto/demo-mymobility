@@ -17,6 +17,7 @@
         """,
     'depends': [
         'base',
+        'web_cohort',
         'timesheet_grid',
         'hr',
         'sale',
