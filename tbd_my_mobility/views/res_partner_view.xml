@@ -6,32 +6,26 @@
         <field name="inherit_id" ref="base.view_partner_form"/>
         <field name="arch" type="xml">
             <data>
+                <!-- global Custom                -->
                 <xpath expr="//h1//field[@name='name']/.." position="before">
                     <group>
                         <field name="mymob_partner_type" options="{'horizontal': true}" class="oe_edit_only" widget="radio"/>
                     </group>
                 </xpath>
-                <xpath expr="//field[@name='type']" position="after">
-                    <group attrs="{'invisible': [('mymob_partner_type', '!=', 'customer')]}">
-                        <h1>Customer</h1>
-                        <field name="mymob_sector" required="0"/>
-                        <field name="mymob_contract"/>
-                    </group>
+
+                <xpath expr="//field[@name='website']" position="attributes">
+                    <attribute name="invisible">1</attribute>
                 </xpath>
-                <xpath expr="//field[@name='type']" position="after">
-                    <group attrs="{'invisible': [('mymob_partner_type', '!=', 'society')]}">
-                        <h1>Society</h1>
-                        <field name="mymob_sector" required="0"/>
-                        <field name="mymob_contract"/>
-                    </group>
+
+                <xpath expr="//page[@name='sales_purchases']" position="attributes">
+                    <attribute name="invisible">1</attribute>
                 </xpath>
-                <xpath expr="//field[@name='type']" position="after">
-                    <group attrs="{'invisible': [('mymob_partner_type', '!=', 'school')]}">
-                        <h1>school</h1>
-                        <field name="mymob_sector" required="0"/>
-                        <field name="mymob_school_type"/>
-                    </group>
+
+                <xpath expr="//page[@name='geo_location']" position="attributes">
+                    <attribute name="attrs">{'invisible': [('mymob_partner_type', 'in', ['society', 'customer'])]}</attribute>
                 </xpath>
+
+                <!--    Student Custom            -->
                 <xpath expr="//field[@name='type']" position="after">
                     <group attrs="{'invisible': [('mymob_partner_type', '!=', 'student')]}">
                         <h1>student</h1>
@@ -40,14 +34,79 @@
                         <field name="mymob_lots"/>
                     </group>
                 </xpath>
-                <xpath expr="//field[@name='website']" position="attributes">
-                    <attribute name="invisible">1</attribute>
+
+                <xpath expr="//field[@name='parent_id']" position="attributes">
+                    <attribute name="attrs">{'invisible':[('mymob_partner_type','=','student')]} </attribute>
                 </xpath>
-                <xpath expr="//page[@name='sales_purchases']" position="attributes">
-                    <attribute name="invisible">1</attribute>
+
+                <xpath expr="//field[@name='function']" position="attributes">
+                    <attribute name="attrs">{'invisible':[('mymob_partner_type','=','student')]} </attribute>
                 </xpath>
-                <xpath expr="//page[@name='geo_location']" position="attributes">
-                    <attribute name="attrs">{'invisible': [('mymob_partner_type', 'in', ['society', 'customer'])]}</attribute>
+
+                <xpath expr="//field[@name='lang']" position="attributes">
+                    <attribute name="attrs">{'invisible':[('mymob_partner_type','=','student')]} </attribute>
+                </xpath>
+
+                <xpath expr="//label[@for='lang']" position="attributes">
+                    <attribute name="attrs">{'invisible':[('mymob_partner_type','=','student')]} </attribute>
+                </xpath>
+
+                <xpath expr="//button[@name='%(base.res_lang_act_window)d']" position="attributes">
+                    <attribute name="attrs">{'invisible':[('mymob_partner_type','=','student')]} </attribute>
+                </xpath>
+                <!--  School Custom   -->
+                <xpath expr="//field[@name='type']" position="after">
+                    <group attrs="{'invisible': [('mymob_partner_type', '!=', 'school')]}">
+                        <h1>school</h1>
+                        <field name="mymob_sector" required="0"/>
+                        <field name="mymob_school_type"/>
+                    </group>
+                </xpath>
+
+                <!-- society Custom                -->
+                <xpath expr="//field[@name='type']" position="after">
+                    <group attrs="{'invisible': [('mymob_partner_type', '!=', 'society')]}">
+                        <h1>Society</h1>
+                        <field name="mymob_sector" required="0"/>
+                        <field name="mymob_contract"/>
+                    </group>
+                </xpath>
+
+                <!--    customer Custom            -->
+                <xpath expr="//field[@name='type']" position="after">
+                    <group attrs="{'invisible': [('mymob_partner_type', '!=', 'customer')]}">
+                        <h1>Customer</h1>
+                        <field name="mymob_sector" required="0"/>
+                        <field name="mymob_contract"/>
+                    </group>
+                </xpath>
+            </data>
+        </field>
+    </record>
+
+    <!-- Edit view Sales   -->
+    <record id="tbd_res_partner_view_buttons" model="ir.ui.view">
+        <field name="name">Edit view sales</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="sale.res_partner_view_buttons"/>
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//button[@name='%(sale.act_res_partner_2_sale_order)d']" position="replace">
+
+                </xpath>
+            </data>
+        </field>
+    </record>
+
+    <!-- Edit view account   -->
+    <record id="tbd_partner_view_buttons" model="ir.ui.view">
+        <field name="name">Edit view sales</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="account.partner_view_buttons"/>
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//button[@name='action_view_partner_invoices']" position="replace">
+
                 </xpath>
             </data>
         </field>
