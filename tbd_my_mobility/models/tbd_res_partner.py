@@ -59,6 +59,9 @@ class TbdResPartner(models.Model):
 
     mymob_street3 = fields.Char()
     mymob_street4 = fields.Char()
+
+    mymob_GESCAR_reference = fields.Char()
+
     # @api.onchange(mymob_partner_type)
     # def on_change_mymob_partner_type(self):
     #     """ """
