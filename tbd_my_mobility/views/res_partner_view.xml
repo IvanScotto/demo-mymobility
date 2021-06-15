@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-    <record id="view_partner_simple_form_mymob_type" model="ir.ui.view">
+    <record id="view_partner_form_mymob_type" model="ir.ui.view">
         <field name="name">Add mymob_type</field>
         <field name="model">res.partner</field>
         <field name="inherit_id" ref="base.view_partner_form"/>
@@ -53,7 +53,25 @@
                     <field name="mymob_street3" placeholder="Street3..." class="o_address_street"/>
                     <field name="mymob_street4" placeholder="Street4..." class="o_address_street"/>
                 </xpath>
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="mymob_GESCAR_reference" attrs="{'invisible': [('mymob_partner_type', '!=', 'customer')]}"/>
+                </xpath>
             </data>
         </field>
     </record>
+
+    <record id="view_partner_simple_form_mymob" model="ir.ui.view">
+        <field name="name">view.partner.simple.form.mymob</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_simple_form" />
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//field[@name='street2']" position="after">
+                    <field name="mymob_street3" placeholder="Street3..." class="o_address_street"/>
+                    <field name="mymob_street4" placeholder="Street4..." class="o_address_street"/>
+                </xpath>
+            </data>
+        </field>
+    </record>
+
 </odoo>
