@@ -30,6 +30,7 @@ class TbdResPartner(models.Model):
     ]
     select_partner_type = select_partner_company_type + select_partner_individual_type
     mymob_partner_type = fields.Selection(select_partner_type, string='Res Users type')
+
     # TODO Remplir
     select_student_condition = [
         ('WIP', '[WIP] Student')
@@ -59,20 +60,19 @@ class TbdResPartner(models.Model):
 
 
     #default values for res.partner
-         @api.model
-         def _default_mymob_partner_type(self, cr, uid, context=None):
-             if context is None:
-                 context = {}
-             if context.get("mymob_partner_type") == "student":
-                 return "student"
-             else:
-                 return False
+    @api.model
+    def default_get(self, fields):
+        result = super(ResPartner, self).default_get(fields)
+        mymob_partner_type_context = self._context.get('mymob_partner_type')
+        company_type_context = self._context.get('company_type')
 
+        if 'mymob_partner_type' in fields and mymob_partner_type_context:
+            result['mymob_partner_type'] = mymob_partner_type_context
 
+         if 'company_type' in fields and company_type_context:
+            result['company_type'] = company_type_context
 
-    _defaults = {
-        'mymob_partner_type': _default_mymob_partner_type
-    }
+        return result
 
 
     # @api.onchange(mymob_partner_type)
