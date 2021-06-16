@@ -57,6 +57,24 @@ class TbdResPartner(models.Model):
     mymob_siren = fields.Char(string='SIREN', size=9)
     mymob_uai_code = fields.Char(string='Code UAI', size=50)
 
+
+    #default values for res.partner
+         @api.model
+         def _default_mymob_partner_type(self, cr, uid, context=None):
+             if context is None:
+                 context = {}
+             if context.get("mymob_partner_type") == "student":
+                 return "student"
+             else:
+                 return False
+
+
+
+    _defaults = {
+        'mymob_partner_type': _default_mymob_partner_type
+    }
+
+
     # @api.onchange(mymob_partner_type)
     # def on_change_mymob_partner_type(self):
     #     """ """
