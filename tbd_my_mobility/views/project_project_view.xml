@@ -9,7 +9,6 @@
                 <xpath expr="//field[@name='user_id']" position="after">
                     <field name="mymob_agency" required="0"/>
                     <field name="mymob_market" required="0"/>
-                    <field name="mymob_school" widget="many2many_tags"/>
                 </xpath>
             </data>
         </field>
@@ -24,11 +23,20 @@
                 <xpath expr="//field[@name='privacy_visibility']" position="before">
                         <field name="mymob_agency" required="0" string="Agence"/>
                         <field name="mymob_market" string="Marché"/>
-                        <field name="mymob_school" widget="many2many_tags" string="Etablissement scolaire"/>
                         <field name="date_start"/>
                         <field name="date"/>
                 </xpath>
                 <xpath expr="//page[@name='settings']" position="after">
+                    <page name="student" string="Student">
+                        <field name="mymob_school_student" domain="[('mymob_partner_type', '=', 'student'), ]">
+
+                        </field>
+                    </page>
+                    <page name="school" string="School">
+                        <field name="mymob_school_student" domain="[('mymob_partner_type', '=', 'school'), ]">
+
+                        </field>
+                    </page>
                     <page name="maps" string="Maps">
                         <field name="mymob_map" widget="gmap_widget" lat="47" lng="2"/>
                     </page>
@@ -37,20 +45,28 @@
                     <attribute name="widget">many2one_avatar_user</attribute>
                 </xpath>
 
-                <xpath expr="//button[@name='attachment_tree_view']" position="before">
-                    <button name="action_show_school"
-                            type="object"
-                            icon="fa-building-o"
-                            class="oe_stat_button"
-                        >Etabli. scolaire
-                    </button>
-                    <button name="action_show_student"
-                            type="object"
-                            icon="fa-building-o"
-                            class="oe_stat_button"
-                        >Etudiant
-                    </button>
+<!--     TBD remove after #24416 16/06               -->
+<!--                <xpath expr="//button[@name='attachment_tree_view']" position="before">-->
+<!--                    <button name="action_show_school"-->
+<!--                            type="object"-->
+<!--                            icon="fa-building-o"-->
+<!--                            class="oe_stat_button"-->
+<!--                        >Etabli. scolaire-->
+<!--                    </button>-->
+<!--                    <button name="action_show_student"-->
+<!--                            type="object"-->
+<!--                            icon="fa-building-o"-->
+<!--                            class="oe_stat_button"-->
+<!--                        >Etudiant-->
+<!--                    </button>-->
+<!--                </xpath>-->
+                <xpath expr="//button[@name='attachment_tree_view']" position="attributes">
+                    <attribute name="invisible">1</attribute>
                 </xpath>
+                <xpath expr="//div[@name='options_active']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
                 <xpath expr="//div[@name='alias_def']" position="attributes">
                     <attribute name="invisible">1</attribute>
                 </xpath>
@@ -58,6 +74,22 @@
                     <attribute name="invisible">1</attribute>
                 </xpath>
                 <xpath expr="//field[@name='allowed_portal_user_ids']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+            </data>
+        </field>
+    </record>
+
+    <record id="tbd_project_invoice_form" model="ir.ui.view">
+        <field name="name">Edit view</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="hr_timesheet.project_invoice_form"/>
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="//field[@name='allow_timesheets']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//div[@class='o_setting_right_pane']" position="attributes">
                     <attribute name="invisible">1</attribute>
                 </xpath>
             </data>
