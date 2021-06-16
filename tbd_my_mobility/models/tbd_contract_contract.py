@@ -25,7 +25,7 @@ class TbdContractContract(models.Model):
         return {
             'type': 'ir.actions.act_window',
             'name': _('Lots'),
-            'view_mode': 'tree',
+            'view_mode': 'tree,form',
             'res_model': 'project.project',
             'domain': [('mymob_market', '=', self.id)],
             'context': "{'create': True, 'edit': True}"

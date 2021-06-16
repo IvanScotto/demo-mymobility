@@ -9,8 +9,8 @@ _logger = logging.getLogger(__name__)
 class TbdProjectProject(models.Model):
     _inherit = "project.project"
 
-    mymob_school = fields.Many2many('res.partner', string='Etablissement scolaire',
-                                    domain=[('mymob_partner_type', '=', 'school'), ])
+    mymob_school_student = fields.Many2many('res.partner', string='Etablissement scolaire',
+                                    domain=[('mymob_partner_type', 'in', ('school', 'student')), ])
     mymob_agency = fields.Many2one('hr.department', string='Etablissement d\'agence')
     mymob_market = fields.Many2one('contract.contract', string='Marché', readonly=True)
     mymob_map = fields.Many2one('res.partner', string='map address')
@@ -42,24 +42,25 @@ class TbdProjectProject(models.Model):
                 vals['partner_id'] = contract_contract[0]['partner_id'][0]
         return super(TbdProjectProject, self).create(vals)
 
-    def action_show_school(self):
-        self.ensure_one()
-        return {
-            'type': 'ir.actions.act_window',
-            'name': _('School'),
-            'view_mode': 'tree',
-            'res_model': 'res.partner',
-            'domain': [('mymob_partner_type', '=', 'school')],
-            'context': "{'create': True}"
-        }
-
-    def action_show_student(self):
-        self.ensure_one()
-        return {
-            'type': 'ir.actions.act_window',
-            'name': _('Student'),
-            'view_mode': 'tree',
-            'res_model': 'res.partner',
-            'domain': [('mymob_partner_type', '=', 'student')],
-            'context': "{'create': True}"
-        }
+    # TBD remove after #24416 16/06
+    # def action_show_school(self):
+    #     self.ensure_one()
+    #     return {
+    #         'type': 'ir.actions.act_window',
+    #         'name': _('School'),
+    #         'view_mode': 'tree',
+    #         'res_model': 'res.partner',
+    #         'domain': [('mymob_partner_type', '=', 'school')],
+    #         'context': "{'create': True}"
+    #     }
+    #
+    # def action_show_student(self):
+    #     self.ensure_one()
+    #     return {
+    #         'type': 'ir.actions.act_window',
+    #         'name': _('Student'),
+    #         'view_mode': 'tree',
+    #         'res_model': 'res.partner',
+    #         'domain': [('mymob_partner_type', '=', 'student')],
+    #         'context': "{'create': True}"
+    #     }
