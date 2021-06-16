@@ -69,7 +69,7 @@ class TbdResPartner(models.Model):
         if 'mymob_partner_type' in fields and mymob_partner_type_context:
             result['mymob_partner_type'] = mymob_partner_type_context
 
-         if 'company_type' in fields and company_type_context:
+        if 'company_type' in fields and company_type_context:
             result['company_type'] = company_type_context
 
         return result
