@@ -17,6 +17,7 @@
         """,
     'depends': [
         'base',
+        'web_cohort',
         'timesheet_grid',
         'hr',
         'sale',
@@ -37,6 +38,7 @@
         'views/project_task_view.xml',
         'views/project_project_view.xml',
         'views/contract_contract_view.xml',
+        'views/hr_employee_views.xml'
     ],
     'demo': [
     ],

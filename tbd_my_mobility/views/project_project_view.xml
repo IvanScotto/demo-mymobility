@@ -41,6 +41,11 @@
                         <field name="mymob_map" widget="gmap_widget" lat="47" lng="2"/>
                     </page>
                 </xpath>
+                <xpath expr="//page[@name='settings']" position="attributes">
+                    <page name="maps" string="Maps">
+                        <field name="mymob_map" widget="gmap_widget" lat="47" lng="2"/>
+                    </page>
+                </xpath>
                 <xpath expr="//field[@name='user_id']" position="attributes">
                     <attribute name="widget">many2one_avatar_user</attribute>
                 </xpath>
