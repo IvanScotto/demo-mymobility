@@ -30,6 +30,7 @@ class TbdResPartner(models.Model):
     ]
     select_partner_type = select_partner_company_type + select_partner_individual_type
     mymob_partner_type = fields.Selection(select_partner_type, string='Res Users type')
+
     # TODO Remplir
     select_student_condition = [
         ('WIP', '[WIP] Student')
@@ -56,6 +57,23 @@ class TbdResPartner(models.Model):
     mymob_GESCAR_reference = fields.Char()
     mymob_siren = fields.Char(string='SIREN', size=9)
     mymob_uai_code = fields.Char(string='Code UAI', size=50)
+
+
+    #default values for res.partner
+    @api.model
+    def default_get(self, fields):
+        result = super(TbdResPartner, self).default_get(fields)
+        mymob_partner_type_context = self._context.get('mymob_partner_type')
+        company_type_context = self._context.get('company_type')
+
+        if 'mymob_partner_type' in fields and mymob_partner_type_context:
+            result['mymob_partner_type'] = mymob_partner_type_context
+
+        if 'company_type' in fields and company_type_context:
+            result['company_type'] = company_type_context
+
+        return result
+
 
     # @api.onchange(mymob_partner_type)
     # def on_change_mymob_partner_type(self):
