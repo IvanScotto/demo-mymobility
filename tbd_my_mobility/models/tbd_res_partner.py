@@ -62,7 +62,7 @@ class TbdResPartner(models.Model):
     #default values for res.partner
     @api.model
     def default_get(self, fields):
-        result = super(ResPartner, self).default_get(fields)
+        result = super(TbdResPartner, self).default_get(fields)
         mymob_partner_type_context = self._context.get('mymob_partner_type')
         company_type_context = self._context.get('company_type')
 
