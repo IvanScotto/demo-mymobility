@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-    <record id="view_partner_simple_form_mymob_type" model="ir.ui.view">
+    <record id="view_partner_form_mymob_type" model="ir.ui.view">
         <field name="name">Add mymob_type</field>
         <field name="model">res.partner</field>
         <field name="inherit_id" ref="base.view_partner_form"/>
@@ -108,7 +108,22 @@
                 <xpath expr="//button[@name='action_view_partner_invoices']" position="replace">
 
                 </xpath>
+                <xpath expr="//field[@name='street2']" position="after">
+                    <field name="mymob_street3" placeholder="Street3..." class="o_address_street"/>
+                    <field name="mymob_street4" placeholder="Street4..." class="o_address_street"/>
+                </xpath>
+                <xpath expr="//field[@name='function']" position="after">
+                    <field name="mymob_GESCAR_reference" string="Gescar reference" />
+                    <field name="mymob_uai_code" string="Code UAI" attrs="{'invisible': [('mymob_partner_type', '!=', 'school')]}"/>
+                    <field name="mymob_siren" string="SIREN" attrs="{'invisible': [('mymob_partner_type', '!=', 'customer')]}"/>
+                </xpath>
+                <!-- adding to pop in form -->
+                <xpath expr="//div[@name='div_address']/field[@name='street2']" position="after">
+                    <field name="mymob_street3" placeholder="Street3..." class="o_address_street"/>
+                    <field name="mymob_street4" placeholder="Street4..." class="o_address_street"/>
+                </xpath>
             </data>
         </field>
     </record>
+
 </odoo>
