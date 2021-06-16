@@ -15,14 +15,14 @@
                     <group attrs="{'invisible': [('mymob_partner_type', '!=', 'customer')]}">
                         <h1>Customer</h1>
                         <field name="mymob_sector" required="0"/>
-                        <field name="mymob_contract"/>
+                        <field name="mymob_contract" widget="many2many_tags"/>
                     </group>
                 </xpath>
                 <xpath expr="//field[@name='type']" position="after">
                     <group attrs="{'invisible': [('mymob_partner_type', '!=', 'society')]}">
                         <h1>Society</h1>
                         <field name="mymob_sector" required="0"/>
-                        <field name="mymob_contract"/>
+                        <field name="mymob_contract" widget="many2many_tags"/>
                     </group>
                 </xpath>
                 <xpath expr="//field[@name='type']" position="after">
@@ -47,7 +47,7 @@
                     <attribute name="invisible">1</attribute>
                 </xpath>
                 <xpath expr="//page[@name='geo_location']" position="attributes">
-                    <attribute name="attrs">{'invisible': [('mymob_partner_type', 'in', ['society', 'customer'])]}</attribute>
+                    <attribute name="attrs">{'invisible': [('mymob_partner_type', 'in', ['society', 'customer', 'student'])]}</attribute>
                 </xpath>
             </data>
         </field>
