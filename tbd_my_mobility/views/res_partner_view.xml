@@ -80,6 +80,15 @@
                         <field name="mymob_contract"/>
                     </group>
                 </xpath>
+
+                <xpath expr="//field[@name='company_type']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='mymob_partner_type']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
             </data>
         </field>
     </record>
