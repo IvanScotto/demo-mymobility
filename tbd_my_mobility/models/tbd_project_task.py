@@ -69,6 +69,7 @@ class TbdProjectTask(models.Model):
     mymob_end_time = fields.Datetime('Horaire de fin')
 
     mymob_partner_invoice_id = fields.Many2one('res.partner', string='Invoice Address')
+    mymob_student = fields.Many2one('res.partner', string='Student')
 
     select_direction = [
         ('go', 'Aller'),
@@ -82,3 +83,6 @@ class TbdProjectTask(models.Model):
     mymob_stage_time_hour = fields.Integer(string='Heure de l\'étape')
     mymob_stage_time_minute = fields.Integer(string='Minute de l\'étape')
     mymob_distance_between_stage = fields.Float(string='Distance entre étape')
+
+    mymob_child_ids = fields.One2many('project.task', 'parent_id', string="Child")
+    mymob_sequence = fields.Integer(string="Sequence")
