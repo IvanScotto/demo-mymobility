@@ -28,8 +28,6 @@
                                     <create string="Add a line" />
                                 </control>
                                 <field name="name"/>
-                                <field name="description"/>
-                                <field name="mymob_school" widget="many2many_tags"  options="{'no_create_edit': False, 'no_quick_create': False}" />
                                 <field name="mymob_agency"/>
                                 <field name="date_start"/>
                                 <field name="date"/>
@@ -83,21 +81,16 @@
                 <xpath expr="//group[@name='recurring_invoices']" position="attributes">
                     <attribute name="invisible">1</attribute>
                 </xpath>
+
+                <xpath expr="//field[@name='pricelist_id']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='user_id']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+
             </data>
         </field>
     </record>
 </odoo>
-
-
-<!--                   <button
-                            name="action_show_invoices"
-                            type="object"
-                            icon="fa-list"
-                            class="oe_stat_button"
-                        >
-                            <field
-                                string="Invoices"
-                                name="invoice_count"
-                                widget="statinfo"
-                            />
-                        </button>  -->
