@@ -88,7 +88,7 @@
         <field name="context">{'search_default_open': 1}</field>
     </record>
 
-    <menuitem name="TBD" id="tbd_menu" web_icon="tbd_my_mobility,static/description/icon.png" action="action_tbd_project_project"/>
+    <menuitem name="TBD" id="tbd_menu" web_icon="tbd_my_mobility,static/description/logo-my-mobility-226x68.png" action="action_tbd_project_project"/>
         <menuitem id="tbd_menu_client" name="Client" parent="tbd_menu"/>
             <menuitem id="tbd_menu_client_clients" name="Clients" parent="tbd_menu_client" action="action_tbd_res_partner_customer" />
             <menuitem id="tbd_menu_client_market" name="Marchés" parent="tbd_menu_client" action="action_tbd_contract_contract"/>
