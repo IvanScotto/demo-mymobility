@@ -14,6 +14,7 @@ class TbdContractContract(models.Model):
     mymob_lots = fields.One2many(comodel_name='project.project', inverse_name='mymob_market', string='Lots')
 
     mymob_lots_count = fields.Integer(compute="_compute_lots_count")
+    mymob_reference = fields.Char(string='Reference')
 
     def _compute_lots_count(self):
         for rec in self:
