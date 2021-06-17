@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <act_window id="main_action_tbd_project_project"
+                name="My Mobility"
+                res_model="project.project"
+                view_mode="tree,form"
+    />
+    <act_window id="action_tbd_project_project"
+                name="Lots"
+                res_model="project.project"
+                view_mode="tree,form"
+    />
+    <act_window id="action_tbd_project_task_segment"
+                name="Segments"
+                res_model="project.task"
+                view_mode="tree,form"
+                domain="[('mymob_type', '=', 'segment')]"
+    />
+    <act_window id="action_tbd_mail_followers"
+                name="Documents"
+                res_model="mail.followers"
+                view_mode="tree,form"
+    />
+    <act_window id="action_tbd_hr_employee"
+                name="Conducteurs"
+                res_model="hr.employee"
+                view_mode="tree,form"
+    />
+    <act_window id="action_tbd_fleet_vehicle"
+                name="Véhicule"
+                res_model="fleet.vehicle"
+                view_mode="tree,form"
+    />
+    <act_window id="action_tbd_calendar_event"
+                name="Planning"
+                res_model="calendar.event"
+                view_mode="tree,form"
+    />
+    <act_window id="action_tbd_helpdesk_ticket"
+                name="Incidents"
+                res_model="helpdesk.ticket"
+                view_mode="tree,form"
+    />
+    <act_window id="action_tbd_res_company"
+                name="Agences"
+                res_model="res.company"
+                view_mode="tree,form"
+    />
+    <act_window id="action_tbd_hr_department"
+                name="Établissements MyMobility"
+                res_model="hr.department"
+                view_mode="tree,form"
+    />
+
+    <record id="action_tbd_res_partner_society" model="ir.actions.act_window">
+        <field name="name">Clients</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('mymob_partner_type', '=', 'society')]</field>
+        <field name="context">{'mymob_partner_type': 'society', 'company_type':'company'}</field>
+    </record>
+    <record id="action_tbd_res_partner_student" model="ir.actions.act_window">
+        <field name="name">Élèves</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('mymob_partner_type', '=', 'student')]</field>
+        <field name="context">{'mymob_partner_type': 'student', 'company_type':'person'}</field>
+    </record>
+    <record id="action_tbd_res_partner_tutor" model="ir.actions.act_window">
+        <field name="name">Tuteurs</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('mymob_partner_type', '=', 'tutor')]</field>
+        <field name="context">{'mymob_partner_type': 'tutor', 'company_type':'person'}</field>
+    </record>
+    <record id="action_tbd_res_partner_school" model="ir.actions.act_window">
+        <field name="name">Établissements scolaires</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('mymob_partner_type', '=', 'school')]</field>
+        <field name="context">{'mymob_partner_type': 'school', 'company_type':'company'}</field>
+    </record>
+
+    <record id="action_tbd_contract_contract" model="ir.actions.act_window">
+        <field name="name">Marchés</field>
+        <field name="res_model">contract.contract</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{'search_default_open': 1}</field>
+    </record>
+
+    <menuitem name="MyMobility" id="mymobility_menu" web_icon="tbd_my_mobility,static/description/logo2-my-mobility.png" action="action_tbd_project_project"/>
+        <menuitem id="tbd_menu_client" name="Client" parent="mymobility_menu"/>
+            <menuitem id="tbd_menu_client_clients" name="Clients" parent="tbd_menu_client" action="action_tbd_res_partner_society" />
+            <menuitem id="tbd_menu_client_market" name="Marchés" parent="tbd_menu_client" action="action_tbd_contract_contract"/>
+            <menuitem id="tbd_menu_client_lots" name="Lots" parent="tbd_menu_client" action="action_tbd_project_project"/>
+            <menuitem id="tbd_menu_client_segment" name="Segments" parent="tbd_menu_client" action="action_tbd_project_task_segment"/>
+        <menuitem id="tbd_menu_student" name="Eleves" parent="mymobility_menu"/>
+            <menuitem id="tbd_menu_student_student" name="Eleves" parent="tbd_menu_student" action="action_tbd_res_partner_student"/>
+            <menuitem id="tbd_menu_student_tutor" name="Tuteurs" parent="tbd_menu_student" action="action_tbd_res_partner_tutor"/>
+            <menuitem id="tbd_menu_student_document" name="Documents" parent="tbd_menu_student" action="action_tbd_mail_followers"/>
+            <menuitem id="tbd_menu_student_incident" name="Incidents" parent="tbd_menu_student" action="action_tbd_helpdesk_ticket"/>
+        <menuitem id="tbd_menu_school" name="Etablissements scolaires" parent="mymobility_menu"/>
+            <menuitem id="tbd_menu_school_school" name="Etablissements scolaires" parent="tbd_menu_school" action="action_tbd_res_partner_school"/>
+        <menuitem id="tbd_menu_driver" name="Conducteurs" parent="mymobility_menu"/>
+            <menuitem id="tbd_menu_driver_driver" name="Conducteurs" parent="tbd_menu_driver" action="action_tbd_hr_employee"/>
+            <menuitem id="tbd_menu_driver_vehicle" name="Véhicule" parent="tbd_menu_driver" action="action_tbd_fleet_vehicle"/>
+            <menuitem id="tbd_menu_driver_planning" name="Planning" parent="tbd_menu_driver" action="action_tbd_calendar_event"/>
+            <menuitem id="tbd_menu_driver_incidents" name="Incidents" parent="tbd_menu_driver" action="action_tbd_helpdesk_ticket"/>
+        <menuitem id="tbd_menu_establishments" name="Etablissements MyMobility" parent="mymobility_menu"/>
+            <menuitem id="tbd_menu_establishments_agency" name="Agences" parent="tbd_menu_establishments" action="action_tbd_res_company"/>
+            <menuitem id="tbd_menu_establishments_establishments" name="Etablissements MyMobility" parent="tbd_menu_establishments" action="action_tbd_hr_department"/>
+</odoo>
