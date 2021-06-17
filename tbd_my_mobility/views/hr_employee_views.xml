@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="tbd_view_employee_form" model="ir.ui.view">
+        <field name="name">Custom employee</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+            <data>
+<!--   Invisible fields             -->
+                <xpath expr="//field[@name='parent_id']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='coach_id']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//page[@name='hr_settings']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+<!--                -->
+                <xpath expr="//page[@name='personal_information']" position="inside">
+                    <group string="contact mymob">
+                        <field name="mymob_phone"/>
+                        <field name="mymob_mobile"/>
+                        <field name="mymob_email"/>
+                    </group>
+                    <group string="MyMob">
+                        <field name="mymob_status"/>
+                        <field name="mymob_activity_TPMR"/>
+                        <field name="mymob_number_driver_license"/>
+                        <field name="mymob_date_obtain_driver_license"/>
+                        <field name="mymob_matricule"/>
+                        <field name="mymob_start_point_address"/>
+                    </group>
+                </xpath>
+
+            </data>
+        </field>
+    </record>
+</odoo>

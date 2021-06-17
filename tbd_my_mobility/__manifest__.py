@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': "My Mobility by TBD",
-    'version': '14.0.0.3',
+    'version': '14.0.0.4',
     'author': "Agence TBD",
     'website': "https://www.agence-tbd.com",
     'category': 'Website',
@@ -17,6 +17,7 @@
         """,
     'depends': [
         'base',
+        'web_cohort',
         'timesheet_grid',
         'hr',
         'sale',
@@ -37,6 +38,7 @@
         'views/project_task_view.xml',
         'views/project_project_view.xml',
         'views/contract_contract_view.xml',
+        'views/hr_employee_views.xml',
         'views/tbd_menu.xml'
     ],
     'demo': [
