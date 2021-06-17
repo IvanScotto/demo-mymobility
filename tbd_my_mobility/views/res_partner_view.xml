@@ -12,19 +12,19 @@
                         <field name="mymob_partner_type" options="{'horizontal': true}" class="oe_edit_only" widget="radio"/>
                     </group>
                 </xpath>
-
+​
                 <xpath expr="//field[@name='website']" position="attributes">
                     <attribute name="invisible">1</attribute>
                 </xpath>
-
+​
                 <xpath expr="//page[@name='sales_purchases']" position="attributes">
                     <attribute name="invisible">1</attribute>
                 </xpath>
-
+​
                 <xpath expr="//page[@name='geo_location']" position="attributes">
                     <attribute name="attrs">{'invisible': [('mymob_partner_type', 'in', ['society', 'customer'])]}</attribute>
                 </xpath>
-
+​
                 <!--    Student Custom            -->
                 <xpath expr="//field[@name='type']" position="after">
                     <group attrs="{'invisible': [('mymob_partner_type', '!=', 'student')]}">
@@ -34,23 +34,23 @@
                         <field name="mymob_lots"/>
                     </group>
                 </xpath>
-
+​
                 <xpath expr="//field[@name='parent_id']" position="attributes">
                     <attribute name="attrs">{'invisible':[('mymob_partner_type','=','student')]} </attribute>
                 </xpath>
-
+​
                 <xpath expr="//field[@name='function']" position="attributes">
                     <attribute name="attrs">{'invisible':[('mymob_partner_type','=','student')]} </attribute>
                 </xpath>
-
+​
                 <xpath expr="//field[@name='lang']" position="attributes">
                     <attribute name="attrs">{'invisible':[('mymob_partner_type','=','student')]} </attribute>
                 </xpath>
-
+​
                 <xpath expr="//label[@for='lang']" position="attributes">
                     <attribute name="attrs">{'invisible':[('mymob_partner_type','=','student')]} </attribute>
                 </xpath>
-
+​
                 <xpath expr="//button[@name='%(base.res_lang_act_window)d']" position="attributes">
                     <attribute name="attrs">{'invisible':[('mymob_partner_type','=','student')]} </attribute>
                 </xpath>
@@ -62,7 +62,7 @@
                         <field name="mymob_contract" widget="many2many_tags"/>
                     </group>
                 </xpath>
-
+​
                 <!-- society Custom                -->
                 <xpath expr="//field[@name='type']" position="after">
                     <group attrs="{'invisible': [('mymob_partner_type', '!=', 'society')]}">
@@ -71,7 +71,7 @@
                         <field name="mymob_contract" widget="many2many_tags"/>
                     </group>
                 </xpath>
-
+​
                 <!--    customer Custom            -->
                 <xpath expr="//field[@name='type']" position="after">
                     <group attrs="{'invisible': [('mymob_partner_type', '!=', 'customer')]}">
@@ -80,33 +80,27 @@
                         <field name="mymob_contract"/>
                     </group>
                 </xpath>
-
+​
                 <xpath expr="//field[@name='company_type']" position="attributes">
                     <attribute name="invisible">1</attribute>
                 </xpath>
-
+​
                 <xpath expr="//field[@name='mymob_partner_type']" position="attributes">
                     <attribute name="invisible">1</attribute>
                 </xpath>
-
-            </data>
-        </field>
-    </record>
-
-    <!-- Edit view Sales   -->
-    <record id="tbd_res_partner_view_buttons" model="ir.ui.view">
-        <field name="name">Edit view sales</field>
-        <field name="model">res.partner</field>
-        <field name="inherit_id" ref="sale.res_partner_view_buttons"/>
-        <field name="arch" type="xml">
-            <data>
-                <xpath expr="//button[@name='%(sale.act_res_partner_2_sale_order)d']" position="replace">
-
+​
+                <xpath expr="//field[@name='street2']" position="after">
+                    <field name="mymob_street3" placeholder="Street3..." class="o_address_street"/>
+                    <field name="mymob_street4" placeholder="Street4..." class="o_address_street"/>
                 </xpath>
+​
             </data>
         </field>
     </record>
+​
+    <!-- Edit view Sales   -->
 
+​
     <!-- Edit view account   -->
     <record id="tbd_partner_view_buttons" model="ir.ui.view">
         <field name="name">Edit view sales</field>
@@ -115,26 +109,9 @@
         <field name="arch" type="xml">
             <data>
                 <xpath expr="//button[@name='action_view_partner_invoices']" position="replace">
+                </xpath>
 
-                </xpath>
-                <xpath expr="//field[@name='street2']" position="after">
-                    <field name="mymob_street3" placeholder="Street3..." class="o_address_street"/>
-                    <field name="mymob_street4" placeholder="Street4..." class="o_address_street"/>
-                </xpath>
-                <xpath expr="//field[@name='function']" position="after">
-                    <field name="mymob_GESCAR_reference" string="Gescar reference" />
-                    <field name="mymob_uai_code" string="Code UAI" attrs="{'invisible': [('mymob_partner_type', '!=', 'school')]}"/>
-                    <field name="mymob_siren" string="SIREN" attrs="{'invisible': [('mymob_partner_type', '!=', 'customer')]}"/>
-                </xpath>
-                <!-- adding to pop in form -->
-                <xpath expr="//div[@name='div_address']/field[@name='street2']" position="after">
-                    <field name="mymob_street3" placeholder="Street3..." class="o_address_street"/>
-                    <field name="mymob_street4" placeholder="Street4..." class="o_address_street"/>
-                <xpath expr="//page[@name='geo_location']" position="attributes">
-                    <attribute name="attrs">{'invisible': [('mymob_partner_type', 'in', ['society', 'customer', 'student'])]}</attribute>
-                </xpath>
             </data>
         </field>
     </record>
-
 </odoo>
