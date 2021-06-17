@@ -52,12 +52,12 @@
                 view_mode="tree,form"
     />
 
-    <record id="action_tbd_res_partner_customer" model="ir.actions.act_window">
-        <field name="name">Client</field>
+    <record id="action_tbd_res_partner_society" model="ir.actions.act_window">
+        <field name="name">Society Client</field>
         <field name="res_model">res.partner</field>
         <field name="view_mode">tree,form</field>
-        <field name="domain">[('mymob_partner_type', '=', 'customer')]</field>
-        <field name="context">{'mymob_partner_type': 'customer', 'company_type':'company'}</field>
+        <field name="domain">[('mymob_partner_type', '=', 'society')]</field>
+        <field name="context">{'mymob_partner_type': 'society', 'company_type':'company'}</field>
     </record>
     <record id="action_tbd_res_partner_student" model="ir.actions.act_window">
         <field name="name">Student</field>
@@ -88,9 +88,9 @@
         <field name="context">{'search_default_open': 1}</field>
     </record>
 
-    <menuitem name="TBD" id="tbd_menu" web_icon="tbd_my_mobility,static/description/logo-my-mobility-226x68.png" action="action_tbd_project_project"/>
+    <menuitem name="MyMobility" id="tbd_menu" web_icon="tbd_my_mobility,static/description/logo2-my-mobility.png" action="action_tbd_project_project"/>
         <menuitem id="tbd_menu_client" name="Client" parent="tbd_menu"/>
-            <menuitem id="tbd_menu_client_clients" name="Clients" parent="tbd_menu_client" action="action_tbd_res_partner_customer" />
+            <menuitem id="tbd_menu_client_clients" name="Clients" parent="tbd_menu_client" action="action_tbd_res_partner_society" />
             <menuitem id="tbd_menu_client_market" name="Marchés" parent="tbd_menu_client" action="action_tbd_contract_contract"/>
             <menuitem id="tbd_menu_client_lots" name="Lots" parent="tbd_menu_client" action="action_tbd_project_project"/>
             <menuitem id="tbd_menu_client_segment" name="Segments" parent="tbd_menu_client" action="action_tbd_project_task_segment"/>
