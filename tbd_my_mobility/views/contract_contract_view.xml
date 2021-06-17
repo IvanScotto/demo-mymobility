@@ -1,18 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-    <record id="tbd_contract_contract_customer_form_view" model="ir.ui.view">
-        <field name="name">Add mymob_type</field>
-        <field name="model">contract.contract</field>
-        <field name="inherit_id" ref="contract.contract_contract_customer_form_view"/>
-        <field name="arch" type="xml">
-            <data>
-                <xpath expr="//field[@name='partner_id']" position="after">
-                     <field name="mymob_partner_invoice_id" required="0"/>
-                </xpath>
-            </data>
-        </field>
-    </record>
-
     <record id="tbd_contract_contract_form_view" model="ir.ui.view">
         <field name="name">Add mymob_type</field>
         <field name="model">contract.contract</field>
@@ -21,7 +8,6 @@
             <data>
                 <xpath expr="//page[@name='recurring_invoice_line']" position="before">
                     <page name="lot" string="Lots">
-<!--                        <field name="mymob_lots" widget="section_and_note_one2many">-->
                         <field name="mymob_lots" widget="one2many">
                             <tree editable="bottom">
                                 <control>
@@ -40,15 +26,14 @@
                 <!--    Button & count  Lots            -->
                 <xpath expr="//button[@name='action_show_invoices']" position="before">
                     <button name="action_show_lots"
-                            type="object"
-                            icon="fa-list-ol"
-                            class="oe_stat_button"
-                        >
-                            <field
-                                string="Lots"
-                                name="mymob_lots_count"
-                                widget="statinfo"
-                            />
+                        type="object"
+                        icon="fa-list-ol"
+                        class="oe_stat_button">
+                        <field
+                            string="Lots"
+                            name="mymob_lots_count"
+                            widget="statinfo"
+                        />
                     </button>
                 </xpath>
 
@@ -64,7 +49,7 @@
                 <xpath expr="//field[@name='contract_template_id']" position="attributes">
                     <attribute name="invisible">1</attribute>
                 </xpath>
-                 <xpath expr="//field[@name='fiscal_position_id']" position="attributes">
+                <xpath expr="//field[@name='fiscal_position_id']" position="attributes">
                     <attribute name="invisible">1</attribute>
                 </xpath>
                 <xpath expr="//field[@name='journal_id']" position="attributes">
