@@ -106,17 +106,17 @@
     </record>
 
     <!-- Edit view Sales   -->
-    <!--    <record id="tbd_res_partner_view_buttons" model="ir.ui.view">-->
-    <!--        <field name="name">Edit view sales</field>-->
-    <!--        <field name="model">res.partner</field>-->
-    <!--        <field name="inherit_id" ref="sale.res_partner_view_buttons"/>-->
-    <!--        <field name="arch" type="xml">-->
-    <!--            <data>-->
-    <!--                <xpath expr="//button[@name='%(sale.act_res_partner_2_sale_order)d']" position="replace">-->
-    <!--                </xpath>-->
-    <!--            </data>-->
-    <!--        </field>-->
-    <!--    </record>-->
+        <record id="tbd_res_partner_view_buttons" model="ir.ui.view">
+            <field name="name">Edit view sales</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="sale.res_partner_view_buttons"/>
+            <field name="arch" type="xml">
+                <data>
+                    <xpath expr="//button[@name='%(sale.act_res_partner_2_sale_order)d']" position="replace">
+                    </xpath>
+                </data>
+            </field>
+        </record>
 
     <!-- Edit view account   -->
     <record id="tbd_partner_view_buttons" model="ir.ui.view">
@@ -127,7 +127,6 @@
             <data>
                 <xpath expr="//button[@name='action_view_partner_invoices']" position="replace">
                 </xpath>
-
             </data>
         </field>
     </record>
