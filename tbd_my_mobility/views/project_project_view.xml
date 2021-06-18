@@ -28,13 +28,13 @@
                 </xpath>
                 <xpath expr="//page[@name='settings']" position="after">
                     <page name="student" string="Student">
-                        <field name="mymob_school_student" domain="[('mymob_partner_type', '=', 'student'), ]">
-
+                        <field name="mymob_student" domain="[('mymob_partner_type', '=', 'student'), ]"
+                                context="{'mymob_partner_type': 'student', 'company_type':'person'}">
                         </field>
                     </page>
                     <page name="school" string="School">
-                        <field name="mymob_school_student" domain="[('mymob_partner_type', '=', 'school'), ]">
-
+                        <field name="mymob_school" domain="[('mymob_partner_type', '=', 'school'),]"
+                               context="{'mymob_partner_type': 'school', 'company_type':'company'}">
                         </field>
                     </page>
                     <page name="maps" string="Maps">
