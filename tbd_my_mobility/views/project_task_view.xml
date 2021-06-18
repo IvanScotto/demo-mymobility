@@ -49,7 +49,7 @@
 <!--                    <attribute name="string">Itinéraire</attribute>-->
 <!--                </xpath>-->
                 <xpath expr="//page[@name='description_page']" position="before">
-                    <page name="route" string="Itineraire">
+                    <page name="route" string="Route">
                         <field name="mymob_child_ids" mode="tree" context="{'mymob_type': 'route'}">"
                             <tree editable="bottom">
                                 <control>
