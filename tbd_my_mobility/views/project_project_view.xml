@@ -27,7 +27,7 @@
                         <field name="date"/>
                 </xpath>
                 <xpath expr="//page[@name='settings']" position="after">
-                    <page name="student" string="Student">
+                    <page name="students" string="Students">
                         <field name="mymob_student" domain="[('mymob_partner_type', '=', 'student'), ]"
                                 context="{'mymob_partner_type': 'student', 'company_type':'person'}">
                         </field>

@@ -103,8 +103,8 @@
             <menuitem id="tbd_menu_client_market" name="Markets" parent="tbd_menu_client" action="action_tbd_contract_contract"/>
             <menuitem id="tbd_menu_client_lots" name="Lots" parent="tbd_menu_client" action="action_tbd_project_project"/>
             <menuitem id="tbd_menu_client_segment" name="Segments" parent="tbd_menu_client" action="action_tbd_project_task_segment"/>
-        <menuitem id="tbd_menu_student" name="Student" parent="mymobility_menu"/>
-            <menuitem id="tbd_menu_student_student" name="Student" parent="tbd_menu_student" action="action_tbd_res_partner_student"/>
+        <menuitem id="tbd_menu_student" name="Students" parent="mymobility_menu"/>
+            <menuitem id="tbd_menu_student_student" name="Students" parent="tbd_menu_student" action="action_tbd_res_partner_student"/>
             <menuitem id="tbd_menu_student_tutor" name="Tutor" parent="tbd_menu_student" action="action_tbd_res_partner_tutor"/>
             <menuitem id="tbd_menu_student_document" name="Documents" parent="tbd_menu_student" action="action_tbd_mail_followers"/>
             <menuitem id="tbd_menu_student_incident" name="Incidents" parent="tbd_menu_student" action="action_tbd_helpdesk_ticket"/>

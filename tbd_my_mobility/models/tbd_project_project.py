@@ -15,7 +15,7 @@ class TbdProjectProject(models.Model):
 
     mymob_school = fields.Many2many('res.partner', 'mymob_school', string='School',
                                     domain=[('mymob_partner_type', '=', 'school'), ])
-    mymob_student = fields.Many2many('res.partner', 'mymob_student', string='Student',
+    mymob_student = fields.Many2many('res.partner', 'mymob_student', string='Students',
                                     domain=[('mymob_partner_type', '=', 'student'), ])
     mymob_agency = fields.Many2one('hr.department', string='Agency')
     mymob_market = fields.Many2one('contract.contract', string='Market', readonly=True)

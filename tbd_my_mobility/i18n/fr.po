@@ -27,7 +27,7 @@ msgstr "Ajouter une ligne"
 #: model:ir.ui.menu,name:tbd_my_mobility.tbd_menu_establishments_agency
 #: model_terms:ir.ui.view,arch_db:tbd_my_mobility.tbd_edit_project
 msgid "Agency"
-msgstr "Etablissement mymobility"
+msgstr "Agence"
 
 #. module: tbd_my_mobility
 #: model:ir.model.fields,field_description:tbd_my_mobility.field_project_task__mymob_child_ids
@@ -369,13 +369,13 @@ msgstr "Vacance scolaire"
 #: model:ir.model.fields,field_description:tbd_my_mobility.field_res_partner__mymob_street3
 #: model:ir.model.fields,field_description:tbd_my_mobility.field_res_users__mymob_street3
 msgid "Mymob Street3"
-msgstr "Rue3"
+msgstr "Rue 3"
 
 #. module: tbd_my_mobility
 #: model:ir.model.fields,field_description:tbd_my_mobility.field_res_partner__mymob_street4
 #: model:ir.model.fields,field_description:tbd_my_mobility.field_res_users__mymob_street4
 msgid "Mymob Street4"
-msgstr "Rue4"
+msgstr "Rue 4"
 
 #. module: tbd_my_mobility
 #: model:ir.model.fields,field_description:tbd_my_mobility.field_project_task__mymob_nbr_cycle
@@ -433,7 +433,7 @@ msgstr "École associée"
 #: model:ir.model.fields,field_description:tbd_my_mobility.field_res_partner__mymob_sector
 #: model:ir.model.fields,field_description:tbd_my_mobility.field_res_users__mymob_sector
 msgid "Res Users sector"
-msgstr "Secteur utilisateurs"
+msgstr "Secteur"
 
 #. module: tbd_my_mobility
 #: model:ir.model.fields,field_description:tbd_my_mobility.field_res_partner__mymob_partner_type
@@ -536,12 +536,12 @@ msgstr "Status"
 #. module: tbd_my_mobility
 #: model_terms:ir.ui.view,arch_db:tbd_my_mobility.view_partner_form_mymob_type
 msgid "Street3..."
-msgstr "Rue3..."
+msgstr "Rue 3..."
 
 #. module: tbd_my_mobility
 #: model_terms:ir.ui.view,arch_db:tbd_my_mobility.view_partner_form_mymob_type
 msgid "Street4..."
-msgstr "Rue4..."
+msgstr "Rue 4..."
 
 #. module: tbd_my_mobility
 #: model:ir.actions.act_window,name:tbd_my_mobility.action_tbd_res_partner_student
@@ -552,8 +552,8 @@ msgstr "Rue4..."
 #: model:ir.ui.menu,name:tbd_my_mobility.tbd_menu_student_student
 #: model_terms:ir.ui.view,arch_db:tbd_my_mobility.tbd_edit_project
 #: model_terms:ir.ui.view,arch_db:tbd_my_mobility.view_partner_form_mymob_type
-msgid "Student"
-msgstr "Élève"
+msgid "Students"
+msgstr "Élèves"
 
 #. module: tbd_my_mobility
 #: model:ir.model.fields.selection,name:tbd_my_mobility.selection__tbd_weekdays__mymob_days__sunday
