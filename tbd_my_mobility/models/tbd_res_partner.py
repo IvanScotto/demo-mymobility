@@ -74,7 +74,17 @@ class TbdResPartner(models.Model):
 
         return result
 
+    def action_show_markets(self):
+        self.ensure_one()
+        return {
+            'type': 'ir.actions.act_window',
+            'name': _('Marchés'),
+            'view_mode': 'tree,form',
+            'res_model': 'contract.contract',
+            'context': "{'create': True}"
+        }
 
+    # TODO A delete
     # @api.onchange(mymob_partner_type)
     # def on_change_mymob_partner_type(self):
     #     """ """
