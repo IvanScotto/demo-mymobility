@@ -9,8 +9,10 @@ _logger = logging.getLogger(__name__)
 class TbdProjectProject(models.Model):
     _inherit = "project.project"
 
+    # TODO A delete
     mymob_school_student = fields.Many2many('res.partner', string='Etablissement scolaire',
                                     domain=[('mymob_partner_type', 'in', ('school', 'student')), ])
+
     mymob_school = fields.Many2many('res.partner', 'mymob_school', string='Etablissement scolaire',
                                     domain=[('mymob_partner_type', '=', 'school'), ])
     mymob_student = fields.Many2many('res.partner', 'mymob_student', string='Etablissement scolaire',
@@ -21,6 +23,7 @@ class TbdProjectProject(models.Model):
     label_tasks = fields.Char(string='Use Tasks as', default='Lots',
                               help="Label used for the tasks of the project.", translate=True)
 
+    # TODO A delete
     test_long = fields.Float(default=47.115983)
     test_lat = fields.Float(default=2.782795)
 
