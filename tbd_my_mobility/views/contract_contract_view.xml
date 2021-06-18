@@ -21,6 +21,9 @@
                         </field>
                     </page>
                 </xpath>
+                <xpath expr="//field[@name='partner_id']" position="after">
+                    <field name="mymob_reference"/>
+                </xpath>
 
 
                 <!--    Button & count  Lots            -->
@@ -79,7 +82,10 @@
                     <attribute name="invisible">1</attribute>
                 </xpath>
 
-
+            <!-- Renommage -->
+                <xpath expr="//field[@name='partner_id']" position="attributes">
+                    <attribute name="string">Client</attribute>
+                </xpath>
             </data>
         </field>
     </record>

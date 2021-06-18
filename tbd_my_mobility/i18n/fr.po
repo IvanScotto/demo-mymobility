@@ -1,0 +1,720 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* tbd_my_mobility
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-18 09:23+0000\n"
+"PO-Revision-Date: 2021-06-18 09:23+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_hr_employee__mymob_activity_TPMR
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_project_task__mymob_activity_TPMR
+msgid "Activité de TPMR"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model_terms:ir.ui.view,arch_db:tbd_my_mobility.tbd_contract_contract_form_view
+#: model_terms:ir.ui.view,arch_db:tbd_my_mobility.tbd_view_task_form2
+msgid "Add a line"
+msgstr "Ajouter une ligne"
+
+#. module: tbd_my_mobility
+#: model:ir.actions.act_window,name:tbd_my_mobility.action_tbd_res_company
+#: model:ir.ui.menu,name:tbd_my_mobility.tbd_menu_establishments_agency
+msgid "Agences"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_project_project__mymob_agency
+#: model_terms:ir.ui.view,arch_db:tbd_my_mobility.tbd_edit_project
+msgid "Agency"
+msgstr "Etablissement mymobility"
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields.selection,name:tbd_my_mobility.selection__project_task__mymob_direction__go
+msgid "Aller"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_project_task__mymob_category_vehicle
+msgid "Category de vehicule"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_project_task__mymob_child_ids
+msgid "Child"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields.selection,name:tbd_my_mobility.selection__res_partner__mymob_partner_type__customer
+#: model:ir.ui.menu,name:tbd_my_mobility.tbd_menu_client
+#: model_terms:ir.ui.view,arch_db:tbd_my_mobility.tbd_contract_contract_form_view
+msgid "Client"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.actions.act_window,name:tbd_my_mobility.action_tbd_res_partner_society
+#: model:ir.ui.menu,name:tbd_my_mobility.tbd_menu_client_clients
+msgid "Clients"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_res_partner__mymob_uai_code
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_res_users__mymob_uai_code
+#: model_terms:ir.ui.view,arch_db:tbd_my_mobility.view_partner_form_mymob_type
+msgid "Code UAI"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_res_partner__mymob_student_condition
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_res_users__mymob_student_condition
+msgid "Condition"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.actions.act_window,name:tbd_my_mobility.action_tbd_hr_employee
+#: model:ir.ui.menu,name:tbd_my_mobility.tbd_menu_driver
+#: model:ir.ui.menu,name:tbd_my_mobility.tbd_menu_driver_driver
+msgid "Conducteurs"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.model,name:tbd_my_mobility.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.model,name:tbd_my_mobility.model_contract_contract
+msgid "Contract"
+msgstr "Marché"
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_hr_employee__mymob_email
+msgid "Courriel2"
+msgstr "Email2"
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_tbd_weekdays__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_tbd_weekdays__create_date
+msgid "Created on"
+msgstr "Créé sur"
+
+#. module: tbd_my_mobility
+#: model_terms:ir.ui.view,arch_db:tbd_my_mobility.view_partner_form_mymob_type
+msgid "Customer"
+msgstr "Client"
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_project_task__mymob_cycle
+msgid "Cycle"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_project_task__mymob_starting_date_validity
+msgid "Date de début de validité"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_project_task__mymob_ending_date_validity
+msgid "Date de fin de validité"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.model,name:tbd_my_mobility.model_tbd_weekdays
+msgid "Day of the week"
+msgstr "Jour de la semaine"
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields.selection,name:tbd_my_mobility.selection__tbd_weekdays__mymob_days__sunday
+msgid "Dimanche"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_contract_contract__display_name
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_hr_employee__display_name
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_project_project__display_name
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_project_task__display_name
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_res_partner__display_name
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_tbd_weekdays__display_name
+msgid "Display Name"
+msgstr "Nom d'affichage"
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_project_task__mymob_distance_between_stage
+msgid "Distance entre étape"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.actions.act_window,name:tbd_my_mobility.action_tbd_mail_followers
+#: model:ir.ui.menu,name:tbd_my_mobility.tbd_menu_student_document
+msgid "Documents"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_project_task__mymob_stop_duration
+msgid "Durée de l'arrêt"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields.selection,name:tbd_my_mobility.selection__res_partner__mymob_partner_type__student
+msgid "Eleve"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.ui.menu,name:tbd_my_mobility.tbd_menu_student
+#: model:ir.ui.menu,name:tbd_my_mobility.tbd_menu_student_student
+msgid "Eleves"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.model,name:tbd_my_mobility.model_hr_employee
+msgid "Employee"
+msgstr "Employé"
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_project_project__mymob_school_student
+#: model:ir.model.fields.selection,name:tbd_my_mobility.selection__res_partner__mymob_partner_type__school
+msgid "Etablissement scolaire"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.ui.menu,name:tbd_my_mobility.tbd_menu_establishments
+#: model:ir.ui.menu,name:tbd_my_mobility.tbd_menu_establishments_establishments
+msgid "Etablissements MyMobility"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.ui.menu,name:tbd_my_mobility.tbd_menu_school
+#: model:ir.ui.menu,name:tbd_my_mobility.tbd_menu_school_school
+msgid "Etablissements scolaires"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model_terms:ir.ui.view,arch_db:tbd_my_mobility.view_partner_form_mymob_type
+msgid "Gescar reference"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_project_task__mymob_stage_time_hour
+msgid "Heure de l'étape"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_project_task__mymob_start_time
+msgid "Horaire de début"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_project_task__mymob_end_time
+msgid "Horaire de fin"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_contract_contract__id
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_hr_employee__id
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_project_project__id
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_project_task__id
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_res_partner__id
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_tbd_weekdays__id
+msgid "ID"
+msgstr ""
+
+#. module: tbd_my_mobility
+#. openerp-web
+#: code:addons/tbd_my_mobility/static/src/xml/import_button.xml:0
+#, python-format
+msgid "Import records"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.actions.act_window,name:tbd_my_mobility.action_tbd_helpdesk_ticket
+#: model:ir.ui.menu,name:tbd_my_mobility.tbd_menu_driver_incidents
+#: model:ir.ui.menu,name:tbd_my_mobility.tbd_menu_student_incident
+msgid "Incidents"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_contract_contract__mymob_partner_invoice_id
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_project_task__mymob_partner_invoice_id
+msgid "Invoice Address"
+msgstr "Adresse de facturation"
+
+#. module: tbd_my_mobility
+#: model_terms:ir.ui.view,arch_db:tbd_my_mobility.tbd_view_task_form2
+msgid "Itineraire"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields.selection,name:tbd_my_mobility.selection__project_task__mymob_type__route
+msgid "Itinéraire"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields.selection,name:tbd_my_mobility.selection__tbd_weekdays__mymob_days__thursday
+msgid "Jeudi"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_project_task__mybmob_days
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_tbd_weekdays__mymob_days
+msgid "Jour de la semaine"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,help:tbd_my_mobility.field_project_project__label_tasks
+msgid "Label used for the tasks of the project."
+msgstr "Libellé utilisé pour les tâches du projet."
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_contract_contract____last_update
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_hr_employee____last_update
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_project_project____last_update
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_project_task____last_update
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_res_partner____last_update
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_tbd_weekdays____last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_tbd_weekdays__write_uid
+msgid "Last Updated by"
+msgstr "Dernière modification par"
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_tbd_weekdays__write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: tbd_my_mobility
+#: code:addons/tbd_my_mobility/models/tbd_contract_contract.py:0
+#: model:ir.actions.act_window,name:tbd_my_mobility.action_tbd_project_project
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_contract_contract__mymob_lots
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_res_partner__mymob_lots
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_res_users__mymob_lots
+#: model:ir.ui.menu,name:tbd_my_mobility.tbd_menu_client_lots
+#: model_terms:ir.ui.view,arch_db:tbd_my_mobility.tbd_contract_contract_form_view
+#, python-format
+msgid "Lots"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields.selection,name:tbd_my_mobility.selection__tbd_weekdays__mymob_days__monday
+msgid "Lundi"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_project_project__mymob_map
+msgid "Map address"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model_terms:ir.ui.view,arch_db:tbd_my_mobility.tbd_edit_project
+msgid "Maps"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: code:addons/tbd_my_mobility/models/tbd_res_partner.py:0
+#: model:ir.actions.act_window,name:tbd_my_mobility.action_tbd_contract_contract
+#: model:ir.ui.menu,name:tbd_my_mobility.tbd_menu_client_market
+#: model_terms:ir.ui.view,arch_db:tbd_my_mobility.view_partner_form_mymob_type
+#, python-format
+msgid "Marchés"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields.selection,name:tbd_my_mobility.selection__tbd_weekdays__mymob_days__tuesday
+msgid "Mardi"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_project_project__mymob_market
+#: model_terms:ir.ui.view,arch_db:tbd_my_mobility.tbd_edit_project
+msgid "Market"
+msgstr "Marché"
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_hr_employee__mymob_matricule
+msgid "Matricule"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields.selection,name:tbd_my_mobility.selection__tbd_weekdays__mymob_days__wednesday
+msgid "Mercredi"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_project_task__mymob_stage_time_minute
+msgid "Minute de l'étape"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_hr_employee__mymob_mobile
+msgid "Mobile2"
+msgstr "Téléphone2"
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields.selection,name:tbd_my_mobility.selection__project_task__mymob_cycle__month
+msgid "Month"
+msgstr "Mois"
+
+#. module: tbd_my_mobility
+#: model:ir.actions.act_window,name:tbd_my_mobility.main_action_tbd_project_project
+msgid "My Mobility"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model_terms:ir.ui.view,arch_db:tbd_my_mobility.tbd_view_employee_form
+msgid "MyMob"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.ui.menu,name:tbd_my_mobility.mymobility_menu
+msgid "MyMobility"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_hr_employee__mymob_date_obtain_driver_license
+msgid "Mymob Date Obtain Driver License"
+msgstr "Date d'obtention du permis de conduire"
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_res_partner__mymob_GESCAR_reference
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_res_users__mymob_GESCAR_reference
+msgid "Mymob Gescar Reference"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_contract_contract__mymob_lots_count
+msgid "Mymob Lots Count"
+msgstr "Nombre de lots"
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_res_partner__mymob_school_holidays
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_res_users__mymob_school_holidays
+msgid "Mymob School Holidays"
+msgstr "Vacance scolaire"
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_res_partner__mymob_street3
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_res_users__mymob_street3
+msgid "Mymob Street3"
+msgstr "Rue3"
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_res_partner__mymob_street4
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_res_users__mymob_street4
+msgid "Mymob Street4"
+msgstr "Rue4"
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_project_task__mymob_nbr_cycle
+msgid "Nombre de cycle"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_hr_employee__mymob_number_driver_license
+msgid "Numero de permis de conduire"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_hr_employee__mymob_number_securite_social
+msgid "N° de Securite sociale"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.actions.act_window,name:tbd_my_mobility.action_tbd_calendar_event
+#: model:ir.ui.menu,name:tbd_my_mobility.tbd_menu_driver_planning
+msgid "Planning"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields.selection,name:tbd_my_mobility.selection__res_partner__mymob_sector__private
+msgid "Privée"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.model,name:tbd_my_mobility.model_project_project
+msgid "Project"
+msgstr "Projet"
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields.selection,name:tbd_my_mobility.selection__res_partner__mymob_sector__public
+msgid "Public"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_contract_contract__mymob_reference
+msgid "Reference"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_res_partner__mymob_school
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_res_users__mymob_school
+msgid "Related School"
+msgstr "École associée"
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_res_partner__mymob_sector
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_res_users__mymob_sector
+msgid "Res Users sector"
+msgstr "Secteur utilisateurs"
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_res_partner__mymob_partner_type
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_res_users__mymob_partner_type
+msgid "Res Users type"
+msgstr "Type d'utilisateur"
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields.selection,name:tbd_my_mobility.selection__project_task__mymob_direction__return
+msgid "Retour"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_res_partner__mymob_siren
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_res_users__mymob_siren
+#: model_terms:ir.ui.view,arch_db:tbd_my_mobility.view_partner_form_mymob_type
+msgid "SIREN"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields.selection,name:tbd_my_mobility.selection__tbd_weekdays__mymob_days__saturday
+msgid "Samedi"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_project_project__mymob_school
+#: model_terms:ir.ui.view,arch_db:tbd_my_mobility.tbd_edit_project
+msgid "School"
+msgstr "Établissements scolaires"
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_res_partner__mymob_school_type
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_res_users__mymob_school_type
+msgid "School type"
+msgstr "Type d'établissements scolaires"
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields.selection,name:tbd_my_mobility.selection__project_task__mymob_type__segment
+msgid "Segment"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.actions.act_window,name:tbd_my_mobility.action_tbd_project_task_segment
+#: model:ir.ui.menu,name:tbd_my_mobility.tbd_menu_client_segment
+msgid "Segments"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields.selection,name:tbd_my_mobility.selection__project_task__mymob_nbr_cycle__odd_week
+msgid "Semaine impaire"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields.selection,name:tbd_my_mobility.selection__project_task__mymob_nbr_cycle__even_week
+msgid "Semaine paire"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_project_task__mymob_direction
+msgid "Sens du trajet"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_project_task__mymob_sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model_terms:ir.ui.view,arch_db:tbd_my_mobility.view_partner_form_mymob_type
+msgid "Society"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields.selection,name:tbd_my_mobility.selection__res_partner__mymob_partner_type__society
+msgid "Societé (Client)"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_hr_employee__mymob_start_point_address
+msgid "Start point"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_hr_employee__mymob_status
+msgid "Status"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model_terms:ir.ui.view,arch_db:tbd_my_mobility.view_partner_form_mymob_type
+msgid "Street3..."
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model_terms:ir.ui.view,arch_db:tbd_my_mobility.view_partner_form_mymob_type
+msgid "Street4..."
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_project_project__mymob_student
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_project_task__mymob_student
+#: model_terms:ir.ui.view,arch_db:tbd_my_mobility.tbd_edit_project
+msgid "Student"
+msgstr "Élève"
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields.selection,name:tbd_my_mobility.selection__project_task__mymob_type__driver
+msgid "Tache conducteur"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.model,name:tbd_my_mobility.model_project_task
+msgid "Task"
+msgstr "Tâche"
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_hr_employee__mymob_phone
+msgid "Telehpone2"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_project_project__test_lat
+msgid "Test Lat"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_project_project__test_long
+msgid "Test Long"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields.selection,name:tbd_my_mobility.selection__project_task__mymob_nbr_cycle__every_week
+msgid "Toutes les semaines"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields.selection,name:tbd_my_mobility.selection__res_partner__mymob_partner_type__tutor
+msgid "Tuteur"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.actions.act_window,name:tbd_my_mobility.action_tbd_res_partner_tutor
+#: model:ir.ui.menu,name:tbd_my_mobility.tbd_menu_student_tutor
+msgid "Tuteurs"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_project_task__mymob_type
+msgid "Type de task"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_project_project__label_tasks
+msgid "Use Tasks as"
+msgstr "Utilisez les tâches comme"
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields.selection,name:tbd_my_mobility.selection__tbd_weekdays__mymob_days__friday
+msgid "Vendredi"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.actions.act_window,name:tbd_my_mobility.action_tbd_fleet_vehicle
+#: model:ir.ui.menu,name:tbd_my_mobility.tbd_menu_driver_vehicle
+msgid "Véhicule"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields.selection,name:tbd_my_mobility.selection__project_task__mymob_cycle__week
+msgid "Week"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields.selection,name:tbd_my_mobility.selection__project_task__mymob_cycle__year
+msgid "Year"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields.selection,name:tbd_my_mobility.selection__res_partner__mymob_vacancy_area__a
+msgid "Zone A"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields.selection,name:tbd_my_mobility.selection__res_partner__mymob_vacancy_area__b
+msgid "Zone B"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields.selection,name:tbd_my_mobility.selection__res_partner__mymob_vacancy_area__c
+msgid "Zone C"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_res_partner__mymob_vacancy_area
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_res_users__mymob_vacancy_area
+msgid "Zone de vacance"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields.selection,name:tbd_my_mobility.selection__project_task__mymob_category_vehicle__wip
+msgid "[WIP]"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields.selection,name:tbd_my_mobility.selection__res_partner__mymob_school_type__wip
+msgid "[WIP] School"
+msgstr "[WIP] Établissements scolaires"
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields.selection,name:tbd_my_mobility.selection__res_partner__mymob_student_condition__wip
+msgid "[WIP] Student"
+msgstr "[WIP] Élève"
+
+#. module: tbd_my_mobility
+#: model_terms:ir.ui.view,arch_db:tbd_my_mobility.tbd_view_employee_form
+msgid "contact mymob"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_res_partner__mymob_contract
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_res_users__mymob_contract
+msgid "market"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model_terms:ir.ui.view,arch_db:tbd_my_mobility.view_partner_form_mymob_type
+msgid "school"
+msgstr "Établissements scolaires"
+
+#. module: tbd_my_mobility
+#: model_terms:ir.ui.view,arch_db:tbd_my_mobility.view_partner_form_mymob_type
+msgid "student"
+msgstr "Élève"
+
+#. module: tbd_my_mobility
+#: model:ir.actions.act_window,name:tbd_my_mobility.action_tbd_res_partner_student
+msgid "Élèves"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.actions.act_window,name:tbd_my_mobility.action_tbd_hr_department
+msgid "Établissements MyMobility"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.actions.act_window,name:tbd_my_mobility.action_tbd_res_partner_school
+msgid "Établissements scolaires"
+msgstr ""
