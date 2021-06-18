@@ -1,0 +1,190 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* tbd_my_mobility
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-18 09:05+0000\n"
+"PO-Revision-Date: 2021-06-18 09:05+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+
+#. module: tbd_my_mobility
+#: model_terms:ir.ui.view,arch_db:tbd_my_mobility.tbd_contract_contract_form_view
+#: model_terms:ir.ui.view,arch_db:tbd_my_mobility.tbd_view_task_form2
+msgid "Add a line"
+msgstr "Ajouter une ligne"
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_project_project__mymob_agency
+#: model_terms:ir.ui.view,arch_db:tbd_my_mobility.tbd_edit_project
+msgid "Agency"
+msgstr "Etablissement mymobility"
+
+#. module: tbd_my_mobility
+#: model:ir.model,name:tbd_my_mobility.model_contract_contract
+msgid "Contract"
+msgstr "Marché"
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_hr_employee__mymob_email
+msgid "Courriel2"
+msgstr "Email2"
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_tbd_weekdays__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_tbd_weekdays__create_date
+msgid "Created on"
+msgstr "Créé sur"
+
+#. module: tbd_my_mobility
+#: model_terms:ir.ui.view,arch_db:tbd_my_mobility.view_partner_form_mymob_type
+msgid "Customer"
+msgstr "Client"
+
+#. module: tbd_my_mobility
+#: model:ir.model,name:tbd_my_mobility.model_tbd_weekdays
+msgid "Day of the week"
+msgstr "Jour de la semaine"
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_contract_contract__display_name
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_hr_employee__display_name
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_project_project__display_name
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_project_task__display_name
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_res_partner__display_name
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_tbd_weekdays__display_name
+msgid "Display Name"
+msgstr "Nom d'affichage"
+
+#. module: tbd_my_mobility
+#. openerp-web
+#: code:addons/tbd_my_mobility/static/src/xml/import_button.xml:0
+#, python-format
+msgid "Import records"
+msgstr "Importer"
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_contract_contract__mymob_partner_invoice_id
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_project_task__mymob_partner_invoice_id
+msgid "Invoice Address"
+msgstr "Adresse de facturation"
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,help:tbd_my_mobility.field_project_project__label_tasks
+msgid "Label used for the tasks of the project."
+msgstr "Libellé utilisé pour les tâches du projet."
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_contract_contract____last_update
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_hr_employee____last_update
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_project_project____last_update
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_project_task____last_update
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_res_partner____last_update
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_tbd_weekdays____last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_tbd_weekdays__write_uid
+msgid "Last Updated by"
+msgstr "Dernière modification par"
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_tbd_weekdays__write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_project_project__mymob_market
+#: model_terms:ir.ui.view,arch_db:tbd_my_mobility.tbd_edit_project
+msgid "Market"
+msgstr "Marché"
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_hr_employee__mymob_mobile
+msgid "Mobile2"
+msgstr "Téléphone2"
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields.selection,name:tbd_my_mobility.selection__project_task__mymob_cycle__month
+msgid "Month"
+msgstr "Mois"
+
+#. module: tbd_my_mobility
+#: model:ir.actions.act_window,name:tbd_my_mobility.main_action_tbd_project_project
+msgid "My Mobility"
+msgstr "My Mobility"
+
+#. module: tbd_my_mobility
+#: model_terms:ir.ui.view,arch_db:tbd_my_mobility.tbd_view_employee_form
+msgid "MyMob"
+msgstr "MyMob"
+
+#. module: tbd_my_mobility
+#: model:ir.ui.menu,name:tbd_my_mobility.mymobility_menu
+msgid "MyMobility"
+msgstr "MyMobility"
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_hr_employee__mymob_date_obtain_driver_license
+msgid "Mymob Date Obtain Driver License"
+msgstr "Date d'obtention du permis de conduire"
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_res_partner__mymob_GESCAR_reference
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_res_users__mymob_GESCAR_reference
+msgid "Mymob Gescar Reference"
+msgstr ""
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_contract_contract__mymob_lots_count
+msgid "Mymob Lots Count"
+msgstr "Nombre de lots"
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_res_partner__mymob_school_holidays
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_res_users__mymob_school_holidays
+msgid "Mymob School Holidays"
+msgstr "Vacance scolaire"
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_res_partner__mymob_street3
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_res_users__mymob_street3
+msgid "Mymob Street3"
+msgstr "Rue3"
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_res_partner__mymob_street4
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_res_users__mymob_street4
+msgid "Mymob Street4"
+msgstr "Rue4"
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_res_partner__mymob_school
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_res_users__mymob_school
+msgid "Related School"
+msgstr "École associée"
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_res_partner__mymob_sector
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_res_users__mymob_sector
+msgid "Res Users sector"
+msgstr "Secteur utilisateurs"
+
+#. module: tbd_my_mobility
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_res_partner__mymob_partner_type
+#: model:ir.model.fields,field_description:tbd_my_mobility.field_res_users__mymob_partner_type
+msgid "Res Users type"
+msgstr "Type d'utilisateur"
