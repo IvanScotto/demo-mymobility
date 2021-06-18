@@ -83,7 +83,7 @@
                 <xpath expr="//field[@name='function']" position="attributes">
                     <attribute name="attrs">{'invisible':[('mymob_partner_type','=','society')]} </attribute>
                 </xpath>
-                <xpath expr="//class[@name='oe_button_box']" position="inside">
+                <xpath expr="//div[@class='oe_button_box']" position="inside">
                     <button name="action_show_markets"
                         type="object"
                         icon="fa-list-ol"
