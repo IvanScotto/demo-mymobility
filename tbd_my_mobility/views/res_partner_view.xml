@@ -86,7 +86,7 @@
                 <xpath expr="//div[@class='oe_button_box']" position="inside">
                     <button name="action_show_markets"
                         type="object"
-                        icon="fa-list-ol"
+                        icon="fa-tags"
                         class="oe_stat_button">
                     Marchés
                     </button>
