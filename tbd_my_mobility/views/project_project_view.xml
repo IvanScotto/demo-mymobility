@@ -21,8 +21,8 @@
         <field name="arch" type="xml">
             <data>
                 <xpath expr="//field[@name='privacy_visibility']" position="before">
-                        <field name="mymob_agency" required="0" string="Agence"/>
-                        <field name="mymob_market" string="Marché"/>
+                        <field name="mymob_agency" required="0" string="Agency"/>
+                        <field name="mymob_market" string="Market"/>
                         <field name="date_start"/>
                         <field name="date"/>
                 </xpath>
