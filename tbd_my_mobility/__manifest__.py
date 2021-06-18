@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': "My Mobility by TBD",
-    'version': '14.0.0.4',
+    'version': '14.0.0.5',
     'author': "Agence TBD",
     'website': "https://www.agence-tbd.com",
     'category': 'Website',
@@ -11,6 +11,8 @@
         """,
     'description':
         """
+            * 14.0.0.5 Translations
+            * 14.0.0.4 Add addons Odoo map widget
             * 14.0.0.3 Add addons OCA contract
             * 14.0.0.2 Add addons OCA partner_firstname
             * 14.0.0.1 Installateur TBD
