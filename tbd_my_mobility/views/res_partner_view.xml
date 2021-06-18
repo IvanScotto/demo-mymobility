@@ -77,7 +77,12 @@
                         <field name="mymob_contract" widget="many2many_tags"/>
                     </group>
                 </xpath>
-
+                <xpath expr="//field[@name='partner_id']" position="attributes">
+                    <attribute name="attrs">{'invisible':[('mymob_partner_type','=','society')]} </attribute>
+                </xpath>
+                <xpath expr="//field[@name='function']" position="attributes">
+                    <attribute name="attrs">{'invisible':[('mymob_partner_type','=','society')]} </attribute>
+                </xpath>
                 <!--    customer Custom            -->
                 <xpath expr="//field[@name='type']" position="after">
                     <group attrs="{'invisible': [('mymob_partner_type', '!=', 'customer')]}">
