@@ -21,6 +21,9 @@
                         </field>
                     </page>
                 </xpath>
+                <xpath expr="//field[@name='partner_id']" position="after">
+                    <field name="mymob_reference"/>
+                </xpath>
 
 
                 <!--    Button & count  Lots            -->
