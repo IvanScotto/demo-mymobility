@@ -26,6 +26,4 @@
     <record id="Sunday" model="tbd.weekdays">
         <field name="mymob_days">sunday</field>
     </record>
-
-
 </odoo>
