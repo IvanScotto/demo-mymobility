@@ -37,6 +37,7 @@
     ],
     'data': [
         'security/ir.model.access.csv',
+        'data/master_data_tbd_weekdays.xml',
         'views/res_partner_view.xml',
         'views/project_task_view.xml',
         'views/project_project_view.xml',
