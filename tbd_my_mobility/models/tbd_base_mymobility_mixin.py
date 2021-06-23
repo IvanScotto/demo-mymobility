@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 
-class BaseMymobilityMixin(models.Model):
+from odoo import api, fields, models, _
+
+class BaseMymobilityMixin(models.AbstractModel):
     _name = 'base.mymobility.mixin'
     _description = "Mymobility base model mixin"
 
