@@ -7,7 +7,7 @@ from odoo import api, fields, models, _
 _logger = logging.getLogger(__name__)
 
 class TbdProjectProject(models.Model):
-    _inherits = {"project.project","base.mymobility"}
+    _inherit = ["project.project","base.mymobility.mixin"]
 
     # TODO A delete
     mymob_school_student = fields.Many2many('res.partner', string='Etablissement scolaire',

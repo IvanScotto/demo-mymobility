@@ -8,7 +8,7 @@ _logger = logging.getLogger(__name__)
 
 class TbdContractContract(models.Model):
 
-    _inherits = {"contract.contract","base.mymobility"}
+    _inherit = ["contract.contract","base.mymobility.mixin"]
 
     mymob_partner_invoice_id = fields.Many2one('res.partner', string='Invoice Address')
     mymob_lots = fields.One2many(comodel_name='project.project', inverse_name='mymob_market', string='Lots')

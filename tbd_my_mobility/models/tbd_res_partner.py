@@ -10,7 +10,7 @@ _logger = logging.getLogger(__name__)
 class TbdResPartner(models.Model):
     """Adds last name and first name; name becomes a stored function field."""
 
-    _inherits = {"res.partner","base.mymobility"}
+    _inherit = ["res.partner","base.mymobility.mixin"]
 
     select_sector = [
         ('public', 'Public'),
