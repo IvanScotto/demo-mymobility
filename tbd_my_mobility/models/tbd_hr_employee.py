@@ -7,7 +7,8 @@ from odoo import api, fields, models, _
 _logger = logging.getLogger(__name__)
 
 class TbdHrEmployee(models.Model):
-    _inherit = ["hr.employee","base.mymobility.mixin"]
+    _inherit = "hr.employee"
+    _inherits = {'base.mymobility.mixin':'mymob_update_api_date'}
 
     mymob_number_securite_social = fields.Char("N° de Securite sociale", size=15)
 

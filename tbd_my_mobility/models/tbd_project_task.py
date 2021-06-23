@@ -27,7 +27,8 @@ class TbdProjectTask(models.Model):
     """
 
     """
-    _inherit = ["project.task","base.mymobility.mixin"]
+    _inherit = "project.task"
+    _inherits = {'base.mymobility.mixin':'mymob_update_api_date'}
 
     select_task_type = [
         ('segment', 'Segment'),

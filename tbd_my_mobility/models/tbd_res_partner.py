@@ -10,7 +10,8 @@ _logger = logging.getLogger(__name__)
 class TbdResPartner(models.Model):
     """Adds last name and first name; name becomes a stored function field."""
 
-    _inherit = ["res.partner","base.mymobility.mixin"]
+    _inherit = "res.partner"
+    _inherits = {'base.mymobility.mixin':'mymob_update_api_date'}
 
     select_sector = [
         ('public', 'Public'),

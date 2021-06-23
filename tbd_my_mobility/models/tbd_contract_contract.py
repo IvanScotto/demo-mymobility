@@ -8,7 +8,8 @@ _logger = logging.getLogger(__name__)
 
 class TbdContractContract(models.Model):
 
-    _inherit = ["contract.contract","base.mymobility.mixin"]
+    _inherit = "contract.contract"
+    _inherits = {'base.mymobility.mixin':'mymob_update_api_date'}
     
 
     mymob_partner_invoice_id = fields.Many2one('res.partner', string='Invoice Address')
