@@ -29,12 +29,12 @@
                 <xpath expr="//page[@name='settings']" position="after">
                     <page name="students" string="Students">
                         <field name="mymob_student" domain="[('mymob_partner_type', '=', 'student'), ]"
-                                context="{'mymob_partner_type': 'student', 'company_type':'person'}">
+                               context="{'mymob_partner_type': 'student', 'company_type':'person', 'lot_id': id}">
                         </field>
                     </page>
                     <page name="school" string="School">
                         <field name="mymob_school" domain="[('mymob_partner_type', '=', 'school'),]"
-                               context="{'mymob_partner_type': 'school', 'company_type':'company'}">
+                               context="{'mymob_partner_type': 'school', 'company_type':'company', 'lot_id': id}">
                         </field>
                     </page>
                     <page name="maps" string="Maps">
