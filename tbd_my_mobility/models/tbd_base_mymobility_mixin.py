@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-class BaseMymobilityMixin(models.AbstractModel):
+class BaseMymobilityMixin(models.Model):
     _name = 'base.mymobility.mixin'
     _description = "Mymobility base model mixin"
 
