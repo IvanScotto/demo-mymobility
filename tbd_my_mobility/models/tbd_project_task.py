@@ -41,8 +41,8 @@ class TbdProjectTask(models.Model):
     # mymob_exclusion_calendar = fields.
     # mymob_status = fields.
 
-    mymob_starting_date_validity = fields.Datetime('Date de début de validité')
-    mymob_ending_date_validity = fields.Datetime('Date de fin de validité')
+    mymob_starting_date_validity = fields.Date('Date de début de validité')
+    mymob_ending_date_validity = fields.Date('Date de fin de validité')
     mymob_activity_TPMR = fields.Boolean('Activité de TPMR', default=False)
 
     select_cycle = [
@@ -50,7 +50,7 @@ class TbdProjectTask(models.Model):
         ('month', 'Month'),
         ('year', 'Year')
     ]
-    mymob_cycle = fields.Selection(select_cycle, 'Cycle')
+    mymob_cycle = fields.Selection(select_cycle, 'Cycle', default='week')
 
     select_nbr_cycle = [
         ('every_week', 'Toutes les semaines'),
@@ -68,7 +68,8 @@ class TbdProjectTask(models.Model):
     mymob_start_time = fields.Datetime('Horaire de début')
     mymob_end_time = fields.Datetime('Horaire de fin')
 
-    mymob_partner_invoice_id = fields.Many2one('res.partner', string='Invoice Address')
+    mymob_partner_invoice_id = fields.Many2one('res.partner', string='Invoice Address',
+                                               domain=[('mymob_partner_type', 'in', ('student', 'tutor')), ])
     mymob_student = fields.Many2one('res.partner', string='Student')
 
     select_direction = [
@@ -86,3 +87,17 @@ class TbdProjectTask(models.Model):
 
     mymob_child_ids = fields.One2many('project.task', 'parent_id', string="Child")
     mymob_sequence = fields.Integer(string="Sequence")
+
+    @api.onchange('mymob_student')
+    def onchange_partner_id(self):
+        if not self.mymob_student:
+            self.update({
+                'mymob_partner_invoice_id': False
+            })
+            return
+
+        addr = self.mymob_student.address_get(['invoice'])
+        values = {
+            'mymob_partner_invoice_id': addr['invoice']
+        }
+        self.update(values)
