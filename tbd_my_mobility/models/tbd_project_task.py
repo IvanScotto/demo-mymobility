@@ -27,7 +27,7 @@ class TbdProjectTask(models.Model):
     """
 
     """
-    _inherits = ["project.task","base.mymobility"]
+    _inherits = {"project.task","base.mymobility"}
 
     select_task_type = [
         ('segment', 'Segment'),
