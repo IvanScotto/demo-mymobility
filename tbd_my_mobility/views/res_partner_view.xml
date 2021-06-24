@@ -34,6 +34,7 @@
                         <field name="mymob_lots"/>
                         <field name="mymob_birthday_date"/>
                         <field name="mymob_gender_type"/>
+                        <field name="mymob_stop_duration"/>
                     </group>
                 </xpath>
 
