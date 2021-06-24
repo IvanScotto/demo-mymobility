@@ -9,9 +9,11 @@
             <data>
                 <xpath expr="//field[@name='project_id']" position="after">
                     <field name="mymob_type" required="1" invisible="1"/>
+                    <group>
+                        <field name="mymob_reference" string="Reference"/>
+                    </group>
                     <group attrs="{'invisible': [('mymob_type', '!=', 'segment')]}">
                         <field name="mymob_name" invisible="1"/>
-                        <field name="mymob_reference" string="Reference"/>
                         <group string="Cycle">
                             <field name="mymob_starting_date_validity"/>
                             <field name="mymob_ending_date_validity"/>
