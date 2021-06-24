@@ -86,4 +86,4 @@ class TbdProjectTask(models.Model):
 
     mymob_child_ids = fields.One2many('project.task', 'parent_id', string="Child")
     mymob_sequence = fields.Integer(string="Sequence")
-    mymod_reference = fields.Char(string="Reference")
+
