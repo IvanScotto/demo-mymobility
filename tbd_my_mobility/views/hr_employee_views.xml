@@ -25,7 +25,6 @@
                         <field name="mymob_email"/>
                     </group>
                     <group string="MyMob">
-                        <field name="mymob_status"/>
                         <field name="mymob_activity_TPMR"/>
                         <field name="mymob_number_driver_license"/>
                         <field name="mymob_date_obtain_driver_license"/>
