@@ -53,11 +53,7 @@
                 </xpath>
 
                 <xpath expr="//field[@name='lang']" position="attributes">
-                    <attribute name="attrs">{'invisible':[('mymob_partner_type','=','student')]} </attribute>
-                </xpath>
-
-                <xpath expr="//label[@for='lang']" position="attributes">
-                    <attribute name="attrs">{'invisible':[('mymob_partner_type','=','student')]} </attribute>
+                    <attribute name="invisible">1</attribute>
                 </xpath>
 
                 <xpath expr="//button[@name='%(base.res_lang_act_window)d']" position="attributes">
