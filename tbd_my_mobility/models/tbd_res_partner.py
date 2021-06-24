@@ -60,11 +60,11 @@ class TbdResPartner(models.Model):
     mymob_uai_code = fields.Char(string='Code UAI', size=50)
     mymob_birthday_date = fields.Date(string='Birthday date',domain=[('mymob_partner_type', '=', 'student')])
 
-     select_gender_type = [
+    select_gender_type = [
             ('Mr', 'Mister'),
             ('Ms', 'Miss')
         ]
-     mymob_gender_type = fields.Selection(select_gender_type, string='Gender type',domain=[('mymob_partner_type', '=', 'student')])
+    mymob_gender_type = fields.Selection(select_gender_type, string='Gender type',domain=[('mymob_partner_type', '=', 'student')])
 
     #default values for res.partner
     @api.model
