@@ -81,6 +81,9 @@
                 <xpath expr="//field[@name='allowed_portal_user_ids']" position="attributes">
                     <attribute name="invisible">1</attribute>
                 </xpath>
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="mymob_reference"/>
+                </xpath>
             </data>
         </field>
     </record>
