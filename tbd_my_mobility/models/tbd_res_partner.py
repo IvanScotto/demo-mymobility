@@ -57,10 +57,17 @@ class TbdResPartner(models.Model):
     mymob_street3 = fields.Char()
     mymob_street4 = fields.Char()
     mymob_GESCAR_reference = fields.Char()
-    mymob_siren = fields.Char(string='SIREN', size=9)
+    mymob_siren = fields.Char(string='SIREN', size=9, domain=[('mymob_partner_type', '=', 'society')])
+    mymob_siret = fields.Char(string='SIRET', size=14, domain=[('mymob_partner_type', '=', 'society')])
     mymob_uai_code = fields.Char(string='Code UAI', size=50)
+    mymob_birthday_date = fields.Date(string='Birthday date',domain=[('mymob_partner_type', '=', 'student')])
 
-
+    select_gender_type = [
+            ('Mr', 'Mister'),
+            ('Ms', 'Miss')
+        ]
+    mymob_gender_type = fields.Selection(select_gender_type, string='Gender type',domain=[('mymob_partner_type', '=', 'student')])
+    mymob_stop_duration = fields.Integer(string='Durée de l\'arrêt',domain=[('mymob_partner_type', '=', 'student')])
     #default values for res.partner
     @api.model
     def default_get(self, fields):

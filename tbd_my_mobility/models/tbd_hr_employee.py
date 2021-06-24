@@ -15,7 +15,6 @@ class TbdHrEmployee(models.Model):
     mymob_mobile = fields.Char(string="Mobile2")
     mymob_email = fields.Char(string="Email2")
 
-    mymob_status = fields.Boolean(string='Status')
     mymob_activity_TPMR = fields.Boolean('TPMR activity', default=False)
     mymob_number_driver_license = fields.Char(string='Driver\'s license number')
     mymob_date_obtain_driver_license = fields.Date()

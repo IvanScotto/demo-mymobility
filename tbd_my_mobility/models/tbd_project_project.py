@@ -29,6 +29,8 @@ class TbdProjectProject(models.Model):
     test_long = fields.Float(default=47.115983)
     test_lat = fields.Float(default=2.782795)
 
+    mymob_reference = fields.Char(string="Reference")
+
     @api.onchange('user_id')
     def onchange_partner_id(self):
         if not self.partner_id:
