@@ -33,6 +33,7 @@
                         <field name="mymob_student_condition"/>
                         <field name="mymob_lots"/>
                         <field name="mymob_birthday_date"/>
+                        <field name="mymob_gender_type"/>
                     </group>
                 </xpath>
 
