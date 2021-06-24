@@ -45,9 +45,3 @@ class TbdContractContract(models.Model):
             'mymob_partner_invoice_id': addr['invoice']
         }
         self.update(values)
-
-        # TBD Filter
-        # readonly=True, required=True,
-        # states={'draft': [('readonly', False)], 'sent': [('readonly', False)], 'sale': [('readonly', False)]},
-        # domain="['|', ('company_id', '=', False), ('company_id', '=', company_id)]"
-
