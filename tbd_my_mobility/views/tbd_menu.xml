@@ -17,6 +17,7 @@
         <field name="res_model">project.task</field>
         <field name="view_mode">tree,form</field>
         <field name="domain">[('mymob_type', '=', 'segment')]</field>
+        <field name="context">{'mymob_type': 'segment'}</field>
     </record>
 
     <record id="action_tbd_mail_followers" model="ir.actions.act_window">
