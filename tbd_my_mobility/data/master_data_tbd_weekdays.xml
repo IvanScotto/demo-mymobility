@@ -1,0 +1,29 @@
+<odoo>
+    <record id="Monday" model="tbd.weekdays">
+        <field name="mymob_days">monday</field>
+    </record>
+
+    <record id="Tuesday" model="tbd.weekdays">
+        <field name="mymob_days">tuesday</field>
+    </record>
+
+    <record id="Wednesday" model="tbd.weekdays">
+        <field name="mymob_days">wednesday</field>
+    </record>
+
+    <record id="Thursday" model="tbd.weekdays">
+        <field name="mymob_days">thursday</field>
+    </record>
+
+    <record id="Friday" model="tbd.weekdays">
+        <field name="mymob_days">friday</field>
+    </record>
+
+    <record id="Saturday" model="tbd.weekdays">
+        <field name="mymob_days">saturday</field>
+    </record>
+
+    <record id="Sunday" model="tbd.weekdays">
+        <field name="mymob_days">sunday</field>
+    </record>
+</odoo>

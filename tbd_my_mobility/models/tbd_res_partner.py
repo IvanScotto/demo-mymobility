@@ -74,6 +74,10 @@ class TbdResPartner(models.Model):
         if 'company_type' in fields and company_type_context:
             result['company_type'] = company_type_context
 
+        lot_id_context = self._context.get('lot_id')
+        if 'lot_id' in fields and lot_id_context:
+            result['lot_id'] = lot_id_context
+
         return result
 
     def action_show_markets(self):

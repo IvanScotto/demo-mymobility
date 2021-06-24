@@ -78,7 +78,7 @@ class TbdProjectTask(models.Model):
     ]
     mymob_direction = fields.Selection(select_direction, string='Sens du trajet')
 
-    mymob_days = fields.Many2many('tbd.weekdays', string='Day of the week')
+    mymob_days_ids = fields.Many2many('tbd.weekdays', string='Day of the week')
 
     mymob_stop_duration = fields.Integer(string='Duration of the shutdown')
     mymob_stage_time_hour = fields.Integer(string='Hour of the Stage (H)')

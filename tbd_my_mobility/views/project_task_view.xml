@@ -18,11 +18,11 @@
                             <field name="mymob_cycle"/>
                             <field name="mymob_nbr_cycle"/>
                             <field name="mymob_direction" />
-<!--                            <field name="mymob_days" widget="many2many_tags">-->
-<!--                                <tree>-->
-<!--                                    <field name="mymob_days"/>-->
-<!--                                </tree>-->
-<!--                            </field>-->
+                            <field name="mymob_days_ids" widget="many2many_tags">
+                                <tree>
+                                    <field name="mymob_days"/>
+                                </tree>
+                            </field>
                         </group>
                         <group string="Informations">
                             <field name="mymob_activity_TPMR"/>
@@ -41,6 +41,7 @@
                         <field name="mymob_stage_time_minute"/>
                         <field name="mymob_distance_between_stage"/>
                         <field name="mymob_student"/>
+
                     </group>
                     <!-- Formulaire tache conducteur  -->
                     <group attrs="{'invisible': [('mymob_type', '!=', 'driver')]}">
@@ -109,7 +110,7 @@
                     <field name="mymob_end_time" />
                     <field name="mymob_partner_invoice_id" />
                     <field name="mymob_direction" />
-<!--                    <field name="mybmob_days"/>-->
+<!--                    <field name="mymob_days"/>-->
                 </xpath>
             </data>
         </field>
