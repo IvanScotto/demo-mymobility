@@ -55,7 +55,9 @@ class TbdResPartner(models.Model):
     mymob_street3 = fields.Char()
     mymob_street4 = fields.Char()
     mymob_GESCAR_reference = fields.Char()
-    mymob_siren = fields.Char(string='SIREN', size=9)
+    mymob_siren = fields.Char(string='SIREN', size=9, domain=[('mymob_partner_type', '=', 'society')])
+    mymob_siret = fields.Char(string='SIRET', size=14, domain=[('mymob_partner_type', '=', 'society')])
+
     mymob_uai_code = fields.Char(string='Code UAI', size=50)
 
 
