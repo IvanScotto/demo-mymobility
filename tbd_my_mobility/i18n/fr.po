@@ -212,7 +212,7 @@ msgstr "Allez"
 #. module: tbd_my_mobility
 #: model:ir.model.fields,field_description:tbd_my_mobility.field_project_task__mymob_stage_time_hour
 msgid "Hour of the Stage (H)"
-msgstr "Heure de l\\'étape (H)"
+msgstr "Heure de l'étape (H)"
 
 #. module: tbd_my_mobility
 #: model:ir.model.fields,field_description:tbd_my_mobility.field_base_import_import__id
@@ -326,7 +326,7 @@ msgstr "Marchés"
 #. module: tbd_my_mobility
 #: model:ir.model.fields,field_description:tbd_my_mobility.field_project_task__mymob_stage_time_minute
 msgid "Minute of the Stage (M)"
-msgstr "Minute de l\\'étape (M)"
+msgstr "Minute de l'étape (M)"
 
 #. module: tbd_my_mobility
 #: model:ir.model.fields,field_description:tbd_my_mobility.field_hr_employee__mymob_mobile
