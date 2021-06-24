@@ -78,7 +78,7 @@ class TbdProjectTask(models.Model):
     ]
     mymob_direction = fields.Selection(select_direction, string='Sens du trajet')
 
-    mybmob_days = fields.Many2many('tbd.weekdays', string='Day of the week')
+    mymob_days = fields.Many2many('tbd.weekdays', string='Day of the week')
 
     mymob_stop_duration = fields.Integer(string='Duration of the shutdown')
     mymob_stage_time_hour = fields.Integer(string='Hour of the Stage (H)')
@@ -87,6 +87,11 @@ class TbdProjectTask(models.Model):
 
     mymob_child_ids = fields.One2many('project.task', 'parent_id', string="Child Task")
     mymob_sequence = fields.Integer(string="Sequence")
+    mymob_reference = fields.Char(string="Reference")
+    mymob_name = fields.Char(string="Name", compute='_compute_name')
+
+    #TODO Utiliser juste pour la demo
+    mymob_map = fields.Many2one('res.partner', string='Map address')
 
     @api.onchange('mymob_student')
     def onchange_partner_id(self):
@@ -101,3 +106,25 @@ class TbdProjectTask(models.Model):
             'mymob_partner_invoice_id': addr['invoice']
         }
         self.update(values)
+
+    @api.model
+    def default_get(self, default_fields):
+        result = super(TbdProjectTask, self).default_get(default_fields)
+        mymob_type_context = self._context.get('mymob_type')
+
+        if 'mymob_type' in default_fields and mymob_type_context:
+            result['mymob_type'] = mymob_type_context
+
+        return result
+
+    @api.depends('mymob_reference', 'mymob_sequence')
+    def _compute_name(self):
+        for record in self:
+            if record.mymob_type == 'route' and record.parent_id:
+                if record.parent_id.mymob_reference and record.mymob_sequence:
+                    record.mymob_name = "SEG-{}-ITI-{}".format(record.parent_id.mymob_reference, record.mymob_sequence)
+                else:
+                    record.mymob_name = "child_segment"
+                record.name = record.mymob_name
+            else:
+                record.mymob_name = "parent_segment"

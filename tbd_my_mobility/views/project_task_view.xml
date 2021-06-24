@@ -8,25 +8,30 @@
         <field name="arch" type="xml">
             <data>
                 <xpath expr="//field[@name='project_id']" position="after">
-                    <field name="mymob_type" required="1"/>
+                    <field name="mymob_type" required="1" invisible="1"/>
                     <group attrs="{'invisible': [('mymob_type', '!=', 'segment')]}">
-<!--                        <field name="mymob_exclusion_calendar" required="0"/>-->
-<!--                        <field name="mymob_status" required="0"/>-->
-                        <field name="mymob_starting_date_validity"/>
-                        <field name="mymob_ending_date_validity"/>
-                        <field name="mymob_activity_TPMR"/>
-                        <field name="mymob_cycle"/>
-                        <!-- attrs="{'required': [('mymob_cycle', '=', WEEKS)]}"-->
-                        <field name="mymob_nbr_cycle"/>
-                        <field name="mymob_category_vehicle"/>
-                        <field name="mymob_direction" />
-                        <field name="mybmob_days" widget="many2many_tags">
-                            <tree>
-                                <field name="mymob_days"/>
-                            </tree>
-                        </field>
-                        <field name="mymob_student"/>
+                        <field name="mymob_name" invisible="1"/>
+                        <field name="mymob_reference" string="Reference"/>
+                        <group string="Cycle">
+                            <field name="mymob_starting_date_validity"/>
+                            <field name="mymob_ending_date_validity"/>
+                            <field name="mymob_cycle"/>
+                            <field name="mymob_nbr_cycle"/>
+                            <field name="mymob_direction" />
+<!--                            <field name="mymob_days" widget="many2many_tags">-->
+<!--                                <tree>-->
+<!--                                    <field name="mymob_days"/>-->
+<!--                                </tree>-->
+<!--                            </field>-->
+                        </group>
+                        <group string="Informations">
+                            <field name="mymob_activity_TPMR"/>
+                            <field name="mymob_category_vehicle"/>
+                            <field name="mymob_student"/>
+                        </group>
                     </group>
+
+                    <!-- Formulaire creation route  -->
                     <group attrs="{'invisible': [('mymob_type', '!=', 'route')]}">
                         <field name="mymob_start_time"/>
                         <field name="mymob_end_time"/>
@@ -36,8 +41,8 @@
                         <field name="mymob_stage_time_minute"/>
                         <field name="mymob_distance_between_stage"/>
                         <field name="mymob_student"/>
-
                     </group>
+                    <!-- Formulaire tache conducteur  -->
                     <group attrs="{'invisible': [('mymob_type', '!=', 'driver')]}">
                         <field name="mymob_start_time"/>
                         <field name="mymob_end_time"/>
@@ -45,18 +50,29 @@
                         <field name="mymob_student"/>
                     </group>
                 </xpath>
+                <xpath expr="//field[@name='project_id']" position="attributes">
+                    <attribute name="string">Lot</attribute>
+                </xpath>
+                <xpath expr="//field[@name='date_deadline']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='tag_ids']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
 <!--                <xpath expr="//field[@name='subtask_count']" position="attributes">-->
 <!--                    <attribute name="string">Itinéraire</attribute>-->
 <!--                </xpath>-->
                 <xpath expr="//page[@name='description_page']" position="before">
                     <page name="route" string="Route">
-                        <field name="mymob_child_ids" mode="tree" context="{'mymob_type': 'route'}">"
+                        <field name="mymob_child_ids" mode="tree,form" context="{'mymob_type': 'route'}">"
                             <tree editable="bottom">
                                 <control>
                                     <create string="Add a line" />
                                 </control>
                                 <field name="mymob_sequence"/>
+                                <field name="mymob_name" invisible="1"/>
                                 <field name="name"/>
+                                <field name="mymob_type" invisible="1"/>
                                 <field name="mymob_student"/>
                                 <field name="mymob_partner_invoice_id"/>
                                 <field name="mymob_stop_duration"/>
@@ -64,6 +80,11 @@
                                 <field name="mymob_stage_time_minute"/>
                             </tree>
                         </field>
+                    </page>
+                </xpath>
+                <xpath expr="//page[@name='description_page']" position="before">
+                    <page name="maps" string="Maps">
+                        <field name="mymob_map" widget="gmap_widget" lat="47" lng="2"/>
                     </page>
                 </xpath>
             </data>
@@ -88,7 +109,7 @@
                     <field name="mymob_end_time" />
                     <field name="mymob_partner_invoice_id" />
                     <field name="mymob_direction" />
-                    <field name="mybmob_days"/>
+<!--                    <field name="mybmob_days"/>-->
                 </xpath>
             </data>
         </field>
