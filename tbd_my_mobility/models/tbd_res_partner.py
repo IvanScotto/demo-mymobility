@@ -60,6 +60,8 @@ class TbdResPartner(models.Model):
 
     mymob_uai_code = fields.Char(string='Code UAI', size=50)
 
+    mymob_birthday_date = fields.Date(string='Birthday date',domain=[('mymob_partner_type', '=', 'student')])
+
 
     #default values for res.partner
     @api.model
