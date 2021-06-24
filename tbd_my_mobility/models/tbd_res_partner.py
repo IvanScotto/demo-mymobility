@@ -8,25 +8,27 @@ _logger = logging.getLogger(__name__)
 
 
 class TbdResPartner(models.Model):
-    """Adds last name and first name; name becomes a stored function field."""
+    """
+
+    """
 
     _inherit = "res.partner"
 
     select_sector = [
         ('public', 'Public'),
-        ('private', 'Privée')
+        ('private', 'Private')
     ]
     mymob_sector = fields.Selection(select_sector, string='Res Users sector')
-    mymob_contract = fields.Many2many('contract.contract', string='market')
+    mymob_contract = fields.Many2many('contract.contract', string='Market')
 
     select_partner_company_type = [
-        ('society', 'Societé (Client)'),
-        ('school', 'Etablissement scolaire')
+        ('society', 'Society (Client)'),
+        ('school', 'Educational establishment')
     ]
     select_partner_individual_type = [
         ('customer', 'Client'),
-        ('student', 'Eleve'),
-        ('tutor', 'Tuteur')
+        ('student', 'Student'),
+        ('tutor', 'Tutor')
     ]
     select_partner_type = select_partner_company_type + select_partner_individual_type
     mymob_partner_type = fields.Selection(select_partner_type, string='Res Users type')
@@ -46,7 +48,7 @@ class TbdResPartner(models.Model):
         ('b', 'Zone B'),
         ('c', 'Zone C')
     ]
-    mymob_vacancy_area = fields.Selection(select_vacancy_area, string='Zone de vacance')
+    mymob_vacancy_area = fields.Selection(select_vacancy_area, string='Vacancy area')
     # TODO a definir
     mymob_school_holidays = fields.Char(default="[WIP]")
     mymob_school = fields.Many2one('res.partner', string='Related School', index=True,
@@ -72,26 +74,18 @@ class TbdResPartner(models.Model):
         if 'company_type' in fields and company_type_context:
             result['company_type'] = company_type_context
 
+        lot_id_context = self._context.get('lot_id')
+        if 'lot_id' in fields and lot_id_context:
+            result['lot_id'] = lot_id_context
+
         return result
 
     def action_show_markets(self):
         self.ensure_one()
         return {
             'type': 'ir.actions.act_window',
-            'name': _('Marchés'),
+            'name': _('Market'),
             'view_mode': 'tree,form',
             'res_model': 'contract.contract',
             'context': "{'create': True}"
         }
-
-    # TODO A delete
-    # @api.onchange(mymob_partner_type)
-    # def on_change_mymob_partner_type(self):
-    #     """ """
-    #     if self.mymob_partner_type in self.select_partner_company_type:
-    #         self.is_company = True
-    #         self.company_type = 'company'
-    #     else:
-    #         self.is_company = False
-    #         self.company_type = 'person'
-
