@@ -1,0 +1,9 @@
+<odoo>
+    <data>
+        <template id="odoo_my_mobility_backend_assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <link rel="stylesheet" type="text/scss" href="/tbd_my_mobility/static/src/scss/map.scss"/>
+            </xpath>
+        </template>
+    </data>
+</odoo>
