@@ -43,7 +43,8 @@
         'views/project_project_view.xml',
         'views/contract_contract_view.xml',
         'views/hr_employee_views.xml',
-        'views/tbd_menu.xml'
+        'views/tbd_menu.xml',
+        'views/assets.xml'
     ],
     'demo': [
     ],
