@@ -37,18 +37,12 @@
                                context="{'mymob_partner_type': 'school', 'company_type':'company', 'lot_id': id}">
                         </field>
                     </page>
-                    <page name="maps" string="Maps">
+                    <page id="open_street_map_lot" name="maps" string="Maps" class="open_street_map_lot">
                         <script type="text/javascript" src="/odoo_map_widget/static/src/lib/ol.js"></script>
                         <div class="tab-pane" id="gmap_widget_pane">
                             <div class="map_area mb-6 p-6" style="border:1px solid;">
                                 <div class="map_group" t-attf-data-record-id="loc_tbd">
-                                    <div class="pull-right d-flex flex-column">
-                                        <i class="js_edit_map fa fa-edit ml-2" title="Edit Location"/>
-                                        <i class="js_add_map fa fa-plus ml-2" title="Add a new Map"/>
-                                        <i class="js_delete_map fa fa-trash ml-2" title="Delete Map"/>
-                                    </div>
-                                    <div id="open_street_map_tbd"
-                                         class="demo mt-2 open_street_map" data-wk-name="map"/>
+                                    <div id="open_street_map_tbd" class="demo mt-2 open_street_map" data-wk-name="map"/>
                                 </div>
                             </div>
                         </div>

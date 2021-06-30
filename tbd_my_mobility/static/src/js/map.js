@@ -7,11 +7,20 @@ odoo.define('tbd_my_mobility.maps', function (require) {
         on_attach_callback: function () {
             this._super.apply(this, arguments);
             var self = this;
-            if (self.state.model == 'project.project') {
-                start_draw_map_project_project(self)
-            }
+            var elements = $(".open_street_map_lot, .o_form_button_save");
+            elements.on('click', function (evt) {
+                if (open_maps.length > 0) {
+                    _delete_map();
+                }
+                start_draw_map_project_project(self);
+            });
         },
     })
+
+    function _delete_map() {
+        open_maps.pop();
+        $(".demo").empty();
+    }
 
     function start_draw_map_project_project(self) {
         rpc.query({
@@ -20,6 +29,9 @@ odoo.define('tbd_my_mobility.maps', function (require) {
             fields: ['mymob_student', 'mymob_school'],
             domain: [['id', '=', self.state.data.id]],
         }).then(function (data) {
+            if (!data[0].mymob_school || !data[0].mymob_student) {
+                return false
+            }
             list_id = data[0].mymob_school.concat(data[0].mymob_student)
             rpc.query({
                 model: 'res.partner',
@@ -40,8 +52,7 @@ odoo.define('tbd_my_mobility.maps', function (require) {
             domain: [['project_id', '=', lot_id]],
         }).then(function (data_project_task) {
             let elements = document.querySelectorAll(".demo");
-            barycentre = get_barycentre(data_res_partner);
-            let open_map = draw_openstreet_map(elements, 0, data_res_partner, data_project_task, barycentre)
+            draw_openstreet_map(elements, 0, data_res_partner, data_project_task, get_barycentre(data_res_partner))
         })
     }
 
