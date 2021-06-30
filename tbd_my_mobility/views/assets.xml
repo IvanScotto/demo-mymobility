@@ -2,7 +2,15 @@
     <data>
         <template id="_assets_primary_variables" inherit_id="web._assets_primary_variables">
             <xpath expr="//link[last()]" position="after">
-                <link rel="stylesheet" type="text/scss" href="/tbd_my_mobility/static/src/scss/tbd_my_mobility.scss"/>
+                <link rel="stylesheet" type="text/scss" href="/tbd_my_mobility/static/src/scss/tbd_my_mobility_primary_variables.scss"/>
+            </xpath>
+        </template>
+    </data>
+
+    <data>
+        <template id="assets_backend"  name="helpdesk assets" inherit_id="web.assets_backend">
+            <xpath expr="//link[last()]" position="after">
+                <link rel="stylesheet" type="text/scss" href="/tbd_my_mobility/static/src/scss/tbd_my_mobility_assets_backend.scss"/>
             </xpath>
         </template>
     </data>
