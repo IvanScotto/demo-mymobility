@@ -1,6 +1,6 @@
 <odoo>
     <data>
-        <template id="odoo_my_mobility_backend_assets" inherit_id="web.assets_primary_variables">
+        <template id="odoo_my_mobility_backend_assets" inherit_id="web.assets_backend">
             <xpath expr="./link[1]" position="before">
                 <link rel="stylesheet" type="text/scss" href="/tbd_my_mobility/static/src/scss/tbd_my_mobility.scss"/>
             </xpath>
