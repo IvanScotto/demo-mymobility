@@ -8,6 +8,8 @@ odoo.define("odoo_map_widget.form_map", function (require) {
   var mvc = require("web.mvc");
   var Renderer = mvc.Renderer;
   var draw_openstreet_map = function (elements, i, lat, lng, record_id) {
+    // TBD Stop create map
+    return false
     open_map = new ol.Map({
       layers: [
         new ol.layer.Tile({
