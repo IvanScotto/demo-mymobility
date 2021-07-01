@@ -7,14 +7,15 @@
         <field name="inherit_id" ref="project.view_task_form2"/>
         <field name="arch" type="xml">
             <data>
-                <xpath expr="//field[@name='project_id']" position="after">
-                    <field name="mymob_type" required="1" invisible="1"/>
+<!--                <xpath expr="//field[@name='project_id']" position="after">-->
+                <xpath expr="/form[@class='o_form_project_tasks']/sheet/group" position="after">
                     <group>
+                        <field name="mymob_type" required="1" invisible="1"/>
                         <field name="mymob_reference" string="Reference"/>
                     </group>
-                    <group attrs="{'invisible': [('mymob_type', '!=', 'segment')]}">
+                    <group attrs="{'invisible': [('mymob_type', '!=', 'segment')]}" col="2">
                         <field name="mymob_name" invisible="1"/>
-                        <group string="Cycle">
+                        <group string="Cycle" >
                             <field name="mymob_starting_date_validity"/>
                             <field name="mymob_ending_date_validity"/>
                             <field name="mymob_cycle"/>

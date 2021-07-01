@@ -37,13 +37,16 @@
                                context="{'mymob_partner_type': 'school', 'company_type':'company', 'lot_id': id}">
                         </field>
                     </page>
-                    <page name="maps" string="Maps">
-                        <field name="mymob_map" widget="gmap_widget" lat="47" lng="2"/>
-                    </page>
-                </xpath>
-                <xpath expr="//page[@name='settings']" position="attributes">
-                    <page name="maps" string="Maps">
-                        <field name="mymob_map" widget="gmap_widget" lat="47" lng="2"/>
+                    <page id="open_street_map_lot" name="maps" string="Maps" class="open_street_map_lot">
+                        <script type="text/javascript" src="/odoo_map_widget/static/src/lib/ol.js"></script>
+                        <div class="tab-pane" id="gmap_widget_pane">
+                            <div class="map_area mb-6 p-6" style="border:1px solid;">
+                                <div class="map_group" t-attf-data-record-id="loc_tbd">
+                                    <div id="open_street_map_tbd" class="odoo_map_anchor mt-2 open_street_map" data-wk-name="map"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="popup_map_description"></div>
                     </page>
                 </xpath>
                 <xpath expr="//field[@name='user_id']" position="attributes">
