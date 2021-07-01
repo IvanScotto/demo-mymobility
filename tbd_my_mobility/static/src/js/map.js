@@ -17,7 +17,7 @@ odoo.define('tbd_my_mobility.maps', function (require) {
         },
     })
 
-    function _delete_map() {
+    _delete_map = function () {
         open_maps.pop();
         $(".demo").empty();
     }
@@ -77,7 +77,7 @@ odoo.define('tbd_my_mobility.maps', function (require) {
     }
 
     //
-    function get_address_school(student, data_res_partner) {
+    function get_address_school_content(student, data_res_partner) {
         for (i = 0; i < data_res_partner.length; i++) {
             if (data_res_partner[i].id == student.mymob_school[0] && data_res_partner[i].mymob_partner_type == 'school') {
                 return student.name + ',<br>' + data_res_partner[i].contact_address_complete
@@ -87,10 +87,10 @@ odoo.define('tbd_my_mobility.maps', function (require) {
     }
 
     //
-    function set_popup_address_school_content(data_res_partner, current) {
+    function get_popup_address_school_content(data_res_partner, current) {
         if (current.mymob_partner_type == 'student') {
             if (current.mymob_school) {
-                return get_address_school(current, data_res_partner)
+                return get_address_school_content(current, data_res_partner)
             } else {
                 return current.name
             }
@@ -112,6 +112,7 @@ odoo.define('tbd_my_mobility.maps', function (require) {
                 center: ol.proj.fromLonLat(barycentre),
                 zoom: 6,
             }),
+            // selector usr/tbd_my_mobility/views/project_project_view.xml:45
             target: "open_street_map_tbd",
         });
 
@@ -121,7 +122,7 @@ odoo.define('tbd_my_mobility.maps', function (require) {
             var icon = {};
             var point = new ol.Feature({
                 geometry: new ol.geom.Point(ol.proj.fromLonLat([data_res_partner[i].partner_longitude, data_res_partner[i].partner_latitude])),
-                name: set_popup_address_school_content(data_res_partner, data_res_partner[i])
+                name: get_popup_address_school_content(data_res_partner, data_res_partner[i])
             });
             if (data_res_partner[i].mymob_partner_type == 'student') {
                 if (is_assigned_segment(data_res_partner[i].id, data_project_task)) {
@@ -161,7 +162,7 @@ odoo.define('tbd_my_mobility.maps', function (require) {
         open_map.addLayer(schoolLayer);
 
         // Gestion Popup
-        var element = document.getElementById('popup_address_school');
+        var element = document.getElementById('popup_map_description');
         $(element).popover({
             animation: false,
             placement: 'top',

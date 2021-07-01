@@ -46,7 +46,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div id="popup_address_school"></div>
+                        <div id="popup_map_description"></div>
                     </page>
                 </xpath>
                 <xpath expr="//field[@name='user_id']" position="attributes">
