@@ -42,7 +42,7 @@
                         <div class="tab-pane" id="gmap_widget_pane">
                             <div class="map_area mb-6 p-6" style="border:1px solid;">
                                 <div class="map_group" t-attf-data-record-id="loc_tbd">
-                                    <div id="open_street_map_tbd" class="demo mt-2 open_street_map" data-wk-name="map"/>
+                                    <div id="open_street_map_tbd" class="odoo_map_anchor mt-2 open_street_map" data-wk-name="map"/>
                                 </div>
                             </div>
                         </div>

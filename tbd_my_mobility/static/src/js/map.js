@@ -19,7 +19,7 @@ odoo.define('tbd_my_mobility.maps', function (require) {
 
     _delete_map = function () {
         open_maps.pop();
-        $(".demo").empty();
+        $(".odoo_map_anchor").empty();
     }
 
     function start_draw_map_project_project(self) {
@@ -51,7 +51,7 @@ odoo.define('tbd_my_mobility.maps', function (require) {
             fields: ['mymob_student'],
             domain: [['project_id', '=', lot_id]],
         }).then(function (data_project_task) {
-            let elements = document.querySelectorAll(".demo");
+            let elements = document.querySelectorAll(".odoo_map_anchor");
             draw_openstreet_map(elements, 0, data_res_partner, data_project_task, get_barycentre(data_res_partner))
         })
     }
